@@ -1,0 +1,383 @@
+h1 {
+	text-align:center;
+	font-family: Impact, Charcoal, sans-serif; 
+	font-size: 2em; 
+	font-weight: 900;
+}
+
+html, body { 
+	margin:0; 
+	padding:0; 
+	border:0; 
+	width:100%; 
+	height:100%; 
+	min-width:1800px; 
+}
+
+#container{
+	background-image: url("resources/back3.png");
+	width:100%;
+	height:100%; 
+	margin:0; 
+	padding:0; 
+	border:0;
+	overflow:auto;
+	}
+
+div#header { 
+	border-bottom: 10px solid red;
+	background-image: url("resources/back4.png");
+	background-repeat: repeat-x;min-width:1800px;
+}
+
+div#nav { 
+	min-width:1800px;
+	background-image: linear-gradient(rgb(0, 0, 0) 0%, rgb(35, 35, 35) 10%, rgb(53, 53, 53) 18%, rgb(35, 35, 35) 31%, rgb(76, 76, 76) 50%, rgb(0, 0, 0) 100%);
+ 	height:7%;
+}
+
+div#content {
+	float:left; 
+	width:74%; 
+	height:640px; 
+	margin: 2% 0 0 2%;
+}
+
+div#id{
+	width:100%; 
+	margin: 10%;
+}
+
+div.itembox{
+	background: white;
+	height:290px;
+	width:400px;
+	display:inline-block;
+	margin: 1em 2em 1em 2em;
+	position:relative;
+}
+
+div.loginbox{
+	background: white;
+	height:420px;
+	width:400px;
+	display:inline-block;
+	margin: 1em 2em 1em 2em;
+	position:relative;
+}
+
+div.details{
+	margin:10% 2% 0 0;
+	color:black;
+	text-align:right;
+}
+
+div.logindetails{
+	margin:10% 2% 0 0;
+	color:black;
+	text-align:center;
+}
+
+.imgicon{
+	position:absolute;
+	left:2%;
+	top:2%;
+	max-height:290px;
+	max-width:250px;
+}
+
+.addbutton{
+	position:absolute;
+	right:2%;
+	bottom:2%;
+}
+
+div#cartview {
+	background-image: url("resources/window.png");
+	background-size: 100% 100%;  
+	float:right; 
+	width:400px;
+	height:680px;
+	position:relative;
+}
+
+.clear{
+	clear:both;
+}
+
+.border{
+ 	border: 2px solid gold;
+}
+
+div#shoppingcart{
+	color:red;
+	text-align:
+	center;
+	font-family: Impact, Charcoal, sans-serif; 
+	font-size: 2em; 
+	padding-top:3%;
+}
+
+div#checkout{
+	position:absolute;
+	bottom:1%; 
+	left:32%;
+}
+
+
+div#nav ul{
+	list-style-type:none;
+	padding:1em 0 0 0;
+	margin:0 0 0 1em;
+	border:0;
+}
+
+div#nav ul li{
+	display:inline;
+}
+
+div#nav ul li a{
+	color:white;
+	text-decoration:none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:1.5em;
+	font-weight:900;
+	padding-left:1em;
+	padding-right:1em;
+}
+
+div#nav ul li a:hover{
+	color:red;
+	font-style:italic;
+}
+
+span.formfont{
+	font-family: Arial, Helvetica, sans-serif; font-size: 1.5em;
+	margin-bottom: .25em;
+	padding:.25em;
+	font-size: 1.5em;
+}
+
+input[type=text], input[type=password]{
+	margin-bottom: .25em;
+	padding:.25em;
+	font-size: 1em;
+}
+
+#loginbutton{
+	width:8em;
+	height:3em;
+}
+
+#loginbtn{
+	margin:0 0 2% 32%;
+}
+
+.loginoptions{
+	text-align:left;
+	margin-left:5%;
+}
+
+div#shoppingitems{
+	overflow:auto;
+	color:white;
+	height:500px;
+	width:300px;
+	margin:10% 14% 0 11%;
+}
+
+.remove{
+	padding-top: .2em;
+}
+
+.cartitem{
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 1.5em;
+	text-shadow: 0px 4px 11px black, 0px -4px 11px black;
+}
+
+div#accountsummary{
+	position: relative;
+	float:left;
+	border: solid 3pt black;
+	margin-top: 1em;
+	margin-left: 1em;
+	margin-right: 1em;
+	width: 400px;
+	height: 600px;
+	background: white;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 1.5em;
+}
+
+div#usersummary{
+	border: solid 3pt red;
+	overflow: auto;
+	float:left;
+	margin-top: 1em;
+	margin-left: 1em;
+	margin-right: 1em;
+	width: 1000px;
+	height: 600px;
+	background: white;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 1.5em;
+}
+
+div#itemsummary{
+	border: solid 3pt green;
+	float:left;
+	margin-top: 1em;
+	margin-left: 1em;
+	margin-right: 1em;
+	width: 400px;
+	height: 500px;
+	background: white;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 1.5em;
+}
+
+div#ordersummary{
+	border: solid 3pt blue;
+	float:left;
+	margin-top: 1em;
+	margin-left: 1em;
+	margin-right: 1em;
+	width: 400px;
+	height: 500px;
+	background: white;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 1.5em;
+}
+
+div.accountfield{
+	margin-top: 1.5em;
+	margin-left: .25em;
+}
+
+input.userfield{
+	position: absolute;
+	right: 10%;
+	width: 50%;
+}
+input.passfield{
+	position: absolute;
+	margin-top: .5%;
+	right: 26.5%;
+	width: 38%;
+}
+
+input#editbutton{
+	margin-top:8%;
+	width: 120px;
+	height: 35px;
+}
+
+#userstable{
+	width: 100%;
+}
+
+.celldiv{
+	width:98%;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid 2pt black;
+}
+
+.usercell{
+	float:left;
+	font-size: .5em;
+	width: 8%;
+	overflow:auto;
+	margin: .8%;
+}
+
+.divemail{
+	float:left;
+	font-size: .5em;
+	width: 20%;
+	overflow:auto;
+	margin: .8%;
+}
+
+.divusername{
+	float:left;
+	font-size: .5em;
+	width: 11.5%;
+	overflow:auto;
+	margin: .8%;
+}
+
+.divphone{
+	float:left;
+	font-size: .5em;
+	width: 9%;
+	overflow:auto;
+	margin: .8%;
+}
+.divwebaccess{
+	float:left;
+	font-size: .5em;
+	width: 12%;
+	overflow:auto;
+	margin: .8%;
+}
+.divpinreset{
+	float:left;
+	font-size: .5em;
+	width: 7%;
+	overflow:auto;
+	margin: .8%;
+}
+
+.createusersbox{
+	background: white;
+	height:700px;
+	width:550px;
+	display:inline-block;
+	margin-top: 1em;
+	position:relative;
+}
+
+div.createdetails{
+	text-align: right;
+	padding-right: 5%;
+	padding-bottom:3%;
+}
+
+div.createdetails#referralfield{
+	text-align: right;
+	padding-right: 5%;
+}
+
+div.chgpss{
+	background: white;
+	height:600px;
+	width:600px;
+	display:inline-block;
+	margin: 1em 0 1em 0;
+	position:relative;
+}
+
+div.chgpssdetails{
+	margin:10% 15% 0 0;
+	color:black;
+	text-align:right;
+}
+
+input.resendpin{
+	height:50px;
+	width:65px;
+	white-space: normal;
+}
+
+input.webaccessactivate{
+	height: 25px;
+	width: 75px;
+	margin-bottom: 4px;
+}
+
+input.webaccessrevoke{
+	height: 25px;
+	width: 75px;
+}

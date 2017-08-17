@@ -1,0 +1,6 @@
+AddHandler application/x-httpd-php56 .html
+AddHandler php-script .php .html
+AddHandler php5-script .php .html .htm
+
+ErrorDocument 404 /notfound.html
+

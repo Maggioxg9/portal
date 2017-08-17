@@ -1,0 +1,70 @@
+<?php
+	include 'php_files/functions.php';
+	session_start();
+	clearSessionBools();
+	if(isset($_SESSION['usr']) && isset($_SESSION['pswd'])){
+		//user is logged in, proceed
+	}else{
+		//not logged in, redirect to login page
+		header("Location: login.html");
+		exit();
+	}
+
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	
+<body>
+	<div id="container">
+		<div id="header">
+			<center><img src="resources/back1.png"></center>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="account.html">Back to Account</a></li>
+			</ul>
+		</div>
+		<center><div class="chgpss">
+				<br>
+				<?php if(isset($_SESSION['badchgpss'])){
+					if($_SESSION['badchgpss']==true){
+						echo "Try again. Make sure current password is valid and the new passwords match.";
+					}
+					unset($_SESSION['badchgpss']);
+				}
+				?>
+				<form action="php_files/chgpss.php" method="post">
+					<div class="chgpssdetails">
+						<span class="formfont">Current password:</span>
+							<input class="textbox" type="password" name="currentpass" size="20" maxlength="20">
+					</div>
+					<div class="chgpssdetails">
+						<span class="formfont">New password:</span>
+							<input class="textbox" type="password" name="newpass" size="20" maxlength="20">
+					</div>
+					<div class="chgpssdetails">
+						<span class="formfont">Re-enter new password:</span>
+							<input class="textbox" type="password" name="renewpass" size="20" maxlength="20">
+					</div>
+					<div>
+						<br>
+					</div>
+					<!--<div class="g-recaptcha" data-sitekey="6Ld-CA4TAAAAADicP5F1_KcIIBagpsNeE-TG7nip"></div>
+-->
+
+
+					<center><div>
+						<br>
+						<input id="chgpssbutton" type="submit" value="Submit Change">
+					</div></center>
+					
+				</form>
+				<script src='https://www.google.com/recaptcha/api.js'></script>
+		</div></center>
+    </div>
+</body>
+</html>

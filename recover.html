@@ -1,0 +1,65 @@
+<?php
+	session_start();
+
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	
+<body>
+	<div id="container">
+		<div id="header">
+			<center><img src="resources/back1.png"></center>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="login.html">Back to Login</a></li>
+			</ul>
+		</div>
+		<center><div class="chgpss">
+				<br>
+				<?php if(isset($_SESSION['badrecover'])){
+						echo $_SESSION['badrecover'];
+						unset($_SESSION['badrecover']);
+					}else{
+						echo "";
+					}
+				?>
+				<form action="php_files/pssrecover.php" method="post">
+					<div class="chgpssdetails">
+						<span class="formfont">Username:</span>
+							<input class="textbox" type="text" name="userfield" size="20" maxlength="20">
+					</div>
+					<div class="chgpssdetails">
+						<span class="formfont">Recovery PIN:</span>
+							<input class="textbox" type="password" name="psspin" size="20" maxlength="20">
+					</div>
+					<div class="chgpssdetails">
+						<span class="formfont">New password:</span>
+							<input class="textbox" type="password" name="newpass" size="20" maxlength="20">
+					</div>
+					<div class="chgpssdetails">
+						<span class="formfont">Re-enter new password:</span>
+							<input class="textbox" type="password" name="renewpass" size="20" maxlength="20">
+					</div>
+					<div>
+						<br>
+					</div>
+					<!--<div class="g-recaptcha" data-sitekey="6Ld-CA4TAAAAADicP5F1_KcIIBagpsNeE-TG7nip"></div>
+-->
+
+
+					<center><div>
+						<br>
+						<input id="chgpssbutton" type="submit" value="Submit Change">
+					</div></center>
+					
+				</form>
+				<script src='https://www.google.com/recaptcha/api.js'></script>
+		</div></center>
+    </div>
+</body>
+</html>

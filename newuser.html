@@ -1,0 +1,184 @@
+<?php
+	session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script>
+		function changeReferral(){
+			var field=document.getElementById("referralfield");
+			var cbtn = document.getElementById("clientbtn");
+			if(cbtn.checked){
+				//field.style.display="block";
+			}else{
+				//field.style.display="none";
+			}
+		}
+
+	</script>
+	<script>
+		function initializeForm(){
+			var errorspan=document.getElementById("message");
+			var tmpusername = document.getElementById("usernametext");
+			var tmppassword = document.getElementById("passwordtext");
+			var tmprepassword = document.getElementById("repasswordtext");
+			var tmpfname = document.getElementById("firstnametext");
+			var tmplname = document.getElementById("lastnametext");
+			var tmpemail = document.getElementById("emailtext");
+			var tmpphone = document.getElementById("phonetext");
+			var clientbtn = document.getElementById("clientbtn");
+			var employeebtn = document.getElementById("employeebtn");
+			var tmpref = document.getElementById("referraltext");
+			
+			errorspan.textContent="<?php if(isset($_SESSION['badcreate'])){
+							echo $_SESSION['badcreate'];
+							unset($_SESSION['badcreate']);
+						}else{
+							echo "";
+						}
+					?>";
+			tmpusername.value="<?php if(isset($_SESSION['tmpuser'])){
+							echo $_SESSION['tmpuser'];
+							unset($_SESSION['tmpuser']);
+						}else{
+							echo "";
+						}
+					?>";
+			tmppassword.value="<?php if(isset($_SESSION['tmppass'])){
+							echo $_SESSION['tmppass'];
+							unset($_SESSION['tmppass']);
+						}else{
+							echo "";
+						}
+					?>";
+			tmprepassword.value="<?php if(isset($_SESSION['tmprepass'])){
+							echo $_SESSION['tmprepass'];
+							unset($_SESSION['tmprepass']);
+						}else{
+							echo "";
+						}
+					?>";
+			tmpfname.value="<?php if(isset($_SESSION['tmpfname'])){
+							echo $_SESSION['tmpfname'];
+							unset($_SESSION['tmpfname']);
+						}else{
+							echo "";
+						}
+					?>";
+			tmplname.value="<?php if(isset($_SESSION['tmplname'])){
+							echo $_SESSION['tmplname'];
+							unset($_SESSION['tmplname']);
+						}else{
+							echo "";
+						}
+					?>";
+			tmpemail.value="<?php if(isset($_SESSION['tmpemail'])){
+							echo $_SESSION['tmpemail'];
+							unset($_SESSION['tmpemail']);
+						}else{
+							echo "";
+						}
+					?>";
+			tmpphone.value="<?php if(isset($_SESSION['tmpphone'])){
+							echo $_SESSION['tmpphone'];
+							unset($_SESSION['tmpphone']);
+						}else{
+							echo "";
+						}
+					?>";
+			tmpref.value="<?php if(isset($_SESSION['tmpref'])){
+							echo $_SESSION['tmpref'];
+							unset($_SESSION['tmpref']);
+						}else{
+							echo "";
+						}
+					?>";
+			var tmpbtn="<?php if(isset($_SESSION['tmpbtn'])){
+							echo $_SESSION['tmpbtn'];
+							unset($_SESSION['tmpbtn']);
+						}else{
+							echo "";
+						}
+					?>";
+			if(tmpbtn=="accelemployee"){
+				employeebtn.checked=true;
+			}else{
+				clientbtn.checked=true;
+			}
+			changeReferral();
+			
+		}
+	</script>
+	</head>
+	
+<body>
+	<div id="container">
+		<div id="header">
+			<center><img src="resources/back1.png"></center>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="login.html">Back to Login</a></li>
+			</ul>
+		</div>
+		<center><div class="createusersbox">
+				<form action="php_files/newuservalidate.php" method="post">
+					<div style="margin: 4%;">
+						<span id="message"></span>
+					</div>
+					<div class="createdetails">
+						<span class="formfont">Desired Username:</span>
+							<input class="textbox" id="usernametext" type="text" name="username" size="30" maxlength="20">
+					</div>
+					<div class="createdetails">
+						<span class="formfont">New Password:</span>
+							<input class="textbox"id="passwordtext" type="password" name="password" size="30" maxlength="20">
+					</div>
+					<div class="createdetails">
+						<span class="formfont">Re-type Password:</span>
+							<input class="textbox" id="repasswordtext" type="password" name="repassword" size="30" maxlength="20">
+					</div>
+					<div class="createdetails">
+						<span class="formfont">First Name:</span>
+							<input class="textbox" id="firstnametext" type="text" name="firstname" size="30" maxlength="20">
+					</div>
+					<div class="createdetails">
+						<span class="formfont">Last Name:</span>
+							<input class="textbox" id="lastnametext" type="text" name="lastname" size="30" maxlength="20">
+					</div>
+					<div class="createdetails">
+						<span class="formfont">E-Mail:</span>
+							<input class="textbox" id="emailtext" type="text" name="email" size="30" maxlength="40">
+					</div>
+					<div class="createdetails">
+						<span class="formfont">Phone:</span>
+							<input class="textbox" id="phonetext" type="text" name="phone" size="30" maxlength="20">
+					</div>
+	
+					<div class="createdetails">
+							<input id="clientbtn"  type="radio" name="accounttype" value="client" onclick="changeReferral()">Client Account
+							<input id="employeebtn" type="radio" name="accounttype" value="accelemployee" onclick="changeReferral()">Accel Entertainment Employee
+					</div>
+					<div class="createdetails" id="referralfield">
+						<span class="formfont">Referral Code:</span>
+							<input class="textbox" id="referraltext" type="text" name="refcode" size="30" maxlength="20">
+						<br><br>
+					</div>
+					<!--<div class="g-recaptcha" data-sitekey="6Ld-CA4TAAAAADicP5F1_KcIIBagpsNeE-TG7nip"></div>
+-->
+
+
+					<div id="createbtn">
+						<br>
+						<input id="createbutton" type="submit" value="Create Account">
+					</div>
+				</form>
+				<script src='https://www.google.com/recaptcha/api.js'></script>
+				<script> initializeForm(); </script>
+		</div></center>
+    </div>
+</body>
+</html>

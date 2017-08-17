@@ -1,0 +1,43 @@
+<?php 
+	session_start();
+	if($_SESSION['recentlycreated']=="true"){
+		//procede to show page
+	}else{
+		//redirect to create user page, dont want this page to be navigable from the start
+		header("Location: newuser.html");
+		exit();
+	}
+?>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	
+<body>
+	<div id="container">
+		<div id="header">
+			<center><img src="resources/back1.png"></center>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="login.html">Back to Login</a></li>
+			</ul>
+		</div>
+		<center><div class="createusersbox" style="height:300px">
+			<br>
+			<em>Account Application Successfully Sent.</em>
+			<br>
+			<br>
+			<br>
+			<p style="text-align:left; padding-left: 5%; padding-right:4%;"> Your account application has been submitted for review and a confirmation email has been sent
+			to your email.<br><br> An additional confirmation email will be sent 
+			to you once an Accel Entertainment representative has approved the account and has it activated.<br> <br>You will not be able to log in until the 
+			account has been activated.
+			</p>
+		</div></center>
+    </div>
+</body>
+</html>
