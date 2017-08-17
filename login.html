@@ -11,12 +11,14 @@
 	</head>
 	
 <body>
+	<div id="navcontainer">
+		<div id="navbar">
+			<div id="imgcontainer">
+				<img src="resources/AELogo2.png" />
+			</div>
+		</div>
+	</div>
 	<div id="container">
-		<div id="header">
-			<center><img src="resources/back1.png"></center>
-		</div>
-		<div id="nav">
-		</div>
 		<center><div class="loginbox">
 				<?php if(isset($_SESSION['badlogin'])){
 					if($_SESSION['badlogin']==true){
