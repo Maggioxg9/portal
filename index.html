@@ -1,59 +1,3 @@
-<?php
-	include 'php_files/functions.php';
-	session_start();
-	clearSessionBools();
-	if(isset($_SESSION['usr']) && isset($_SESSION['pswd'])){
-		//user logged in proceed
-	}else{
-		//not logged in, redirect to login
-		header("Location: login.html");
-		exit();
-	}
-	if(count($_POST)>0){
-		$_SESSION['tmpchangingcart']=htmlspecialchars($_POST['changingcart']);
-		$_SESSION['tmpremoveid']=htmlspecialchars($_POST['remove']);
-
-		header("HTTP/1.1 303 See Other");
-		header("Location: index.html");
-		exit();
-		
-	}else if(isset($_SESSION['tmpchangingcart'])){
-		$servername = "localhost";
-		$username = "root";
-		$password = "raspberry";
-		$dbname = "marketing";
-		$removeid=$_SESSION['tmpremoveid'];
-		$cartid=$_SESSION['cartid'];
-
-		try{
-
-			$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
-
-			//prepare sql statements
-			$del= $conn->prepare("delete from cartitems where cartitemid= :cartitemid");
-			$getcart = $conn->prepare("select products.name, cartitems.ud1,cartitems.ud2,cartitems.ud3,cartitems.ud4,cartitems.ud5,cartitems.ud6,cartitems.comments, cartitems.cartitemid from cartitems inner join products on cartitems.productid=products.productid where cartitems.cartid = :newcart");
-
-			$del->execute(array(':cartitemid' => "$removeid"));
-			
-			//get newcart to send to javascript
-			$getcart->execute(array(":newcart" => "$cartid"));
-			$cartresult= $getcart->fetchAll(PDO::FETCH_ASSOC);
-			$_SESSION['changecart']=true;
-			$_SESSION['cartarray']=json_encode($cartresult);
-
-			unset($_SESSION['tmpchangingcart']);
-			unset($_SESSION['tmpremoveid']);
-			$conn = null;
-		}catch(PDOException $e){
-			echo $result . "<br>" . $e->getMessage();
-			$conn = null;
-			exit();
-		}
-	}
-	
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -65,18 +9,15 @@
 	</head>
 	
 <body>
+	<div id="navcontainer">
+		<div id="navbar">
+			<div id="imgcontainer">
+				<img src="resources/AElogo2.png" />
+			</div>
+		</div>
+	</div>
 	<div id="container">
-		
-		<div id="nav">
-	
-		</div>
-		<div id="content">
-			
-	
-		</div>
-		
-		<div class="clear"></div>
-    </div>
+	</div>
 		
 </body>
 </html>
