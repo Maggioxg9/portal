@@ -56,12 +56,15 @@ img {
 }
 
 div.loginbox{
-	background: white;
-	height:420px;
+	background:  #665753;
+	height:320px;
 	width:400px;
+	border: 
 	display:inline-block;
 	margin: 1em 2em 1em 2em;
 	position:relative;
+	border: 1.5px solid black;
+    border-radius: 5px;
 }
 
 div.logindetails{
@@ -76,25 +79,40 @@ div.logindetails{
 
 
 span.formfont{
-	font-family: Arial, Helvetica, sans-serif; font-size: 1.5em;
+	font-family:  Georgia, sans-serif;
+	font-size: 1.5em;
 	margin-bottom: .25em;
 	padding:.25em;
 	font-size: 1.5em;
+	color: white;
 }
 
 input[type=text], input[type=password]{
 	margin-bottom: .25em;
 	padding:.25em;
 	font-size: 1em;
+	background-color: #29201D;
+	color: white;
 }
 
 #loginbutton{
-	width:8em;
+	width:15em;
 	height:3em;
+	background: rgba(209,59,35,1);
+background: -moz-linear-gradient(left, rgba(209,59,35,1) 0%, rgba(228,84,68,1) 9%, rgba(236,65,68,1) 35%, rgba(228,81,68,1) 70%, rgba(234,54,42,1) 95%, rgba(234,54,42,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(209,59,35,1)), color-stop(9%, rgba(228,84,68,1)), color-stop(35%, rgba(236,65,68,1)), color-stop(70%, rgba(228,81,68,1)), color-stop(95%, rgba(234,54,42,1)), color-stop(100%, rgba(234,54,42,1)));
+background: -webkit-linear-gradient(left, rgba(209,59,35,1) 0%, rgba(228,84,68,1) 9%, rgba(236,65,68,1) 35%, rgba(228,81,68,1) 70%, rgba(234,54,42,1) 95%, rgba(234,54,42,1) 100%);
+background: -o-linear-gradient(left, rgba(209,59,35,1) 0%, rgba(228,84,68,1) 9%, rgba(236,65,68,1) 35%, rgba(228,81,68,1) 70%, rgba(234,54,42,1) 95%, rgba(234,54,42,1) 100%);
+background: -ms-linear-gradient(left, rgba(209,59,35,1) 0%, rgba(228,84,68,1) 9%, rgba(236,65,68,1) 35%, rgba(228,81,68,1) 70%, rgba(234,54,42,1) 95%, rgba(234,54,42,1) 100%);
+background: linear-gradient(to right, rgba(209,59,35,1) 0%, rgba(228,84,68,1) 9%, rgba(236,65,68,1) 35%, rgba(228,81,68,1) 70%, rgba(234,54,42,1) 95%, rgba(234,54,42,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d13b23', endColorstr='#ea362a', GradientType=1 );
+ color: white;
+ border: 1.5px solid black;
+    border-radius: 6px;
 }
 
 #loginbtn{
-	margin:0 0 2% 32%;
+	margin:0 ;
 }
 
 .loginoptions{
