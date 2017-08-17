@@ -60,186 +60,22 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<script>
-		function changecart(){
-			var table= document.getElementById("cartitemtable");
-			var itemarray = <?php echo $_SESSION['cartarray']; ?>;
-			if(itemarray){
-				for(var i=0; i<itemarray.length; i++){
-					var row = table.insertRow(i);
-					var cell = row.insertCell(0);
-
-					var form = document.createElement("FORM");
-					form.method="POST";
-					form.action= "<?php echo $_SERVER['PHP_SELF']; ?>";
-
-					var btn = document.createElement("input");
-					btn.setAttribute('type',"image");
-					btn.setAttribute('src', "resources/remove.png");
-					form.appendChild(btn);
-
-					var hidden = document.createElement("input");
-					hidden.setAttribute('type', "hidden");
-					hidden.setAttribute('name', "remove");
-					hidden.setAttribute('value', itemarray[i].cartitemid);
-					form.appendChild(hidden);
-
-					var hiddenbool = document.createElement("input");
-					hiddenbool.setAttribute('type', "hidden");
-					hiddenbool.setAttribute('name', "changingcart");
-					hiddenbool.setAttribute('value', true);
-					form.appendChild(hiddenbool);
-
-				
-					cell.appendChild(form);
-					var item = document.createElement("div");
-					item.setAttribute('class',"cartitem");
-					item.textContent=itemarray[i].name;
-					var cell2= row.insertCell(1);
-					cell2.appendChild(item);
-				}
-			}
-			
-		}
+		
 	</script>
 	</head>
 	
 <body>
 	<div id="container">
-		<div id="header">
-			<center><img src="resources/back1.png"></center>
-		</div>
-		<div id="nav">
 		
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="neons.html">Neons</a></li>
-			<li><a href="coasters.html">Coasters</a></li>
-			<li><a href="seat_cards.html">Seat Cards</a></li>
-			<li><a href="koozies.html">Koozies</a></li>
-			<li><a href="flags.html">Flags</a></li>
-			<li><a href="t-shirts.html">T-Shirts</a></li>
-			<li><a href="banners.html">Banners</a></li>
-			<li><a href="misc.html">Misc.</a></li>
-			<li><a href="account.html">Account</a></li>
-			<li><a href="php_files/logoff.php">Sign Out</a></li>
-		</ul>
+		<div id="nav">
 	
 		</div>
 		<div id="content">
-			<table>
-				<tr>
-					<td>
-						<div class="itembox">
-							<img class="imgicon" src="resources/neons.png">
-							<form action="php_files/addcart.php" method="post">
-							<input type="hidden" name="producturl" value="neons.png">
-							<input type="hidden" name="returnurl" value="index.html">
-							<div class="details">Color:<input type="text" name="color" size="10" maxlength="10"></div>
-							<div class="details">Size:<input type="text" name="size" size="10" maxlength="10"></div>
-							<div class="details">QTY:<input type="text" name="qty" size="10" maxlength="5"></div>
-							<div class="addbutton">
-								<input type="image" src="resources/addbtn.png" name="neons" alt="Add to cart Button" width="105" height="45">
-								</div>
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="itembox">
-							<form action="php_files/addcart.php" method="post">
-							<input type="hidden" name="producturl" value="coasters.png">
-							<input type="hidden" name="returnurl" value="index.html">
-							<div class="details">Color:<input type="text" name="color" size="10" maxlength="10"></div>
-							<div class="details">Size:<input type="text" name="size" size="10" maxlength="10"></div>
-							<div class="details">QTY:<input type="text" name="qty" size="10" maxlength="5"></div>
-							<img class="imgicon" src="resources/coasters.png">
-							<div class="addbutton">
-								<input type="image" src="resources/addbtn.png" name="neons" alt="Add to cart Button" width="105" height="45">
-								</div>
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="itembox">
-							<form action="php_files/addcart.php" method="post">
-							<input type="hidden" name="producturl" value="seatcards.png">
-							<input type="hidden" name="returnurl" value="index.html">
-							<div class="details">Color:<input type="text" name="color" size="10" maxlength="10"></div>
-							<div class="details">Size:<input type="text" name="size" size="10" maxlength="10"></div>
-							<div class="details">QTY:<input type="text" name="qty" size="10" maxlength="5"></div>
-							<img class="imgicon" src="resources/seatcards.png">
-							<div class="addbutton">
-								<input type="image" src="resources/addbtn.png" name="neons" alt="Add to cart Button" width="105" height="45">
-								</div>
-							</form>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="itembox">
-							<form action="php_files/addcart.php" method="post">
-							<input type="hidden" name="producturl" value="koozies.png">
-							<input type="hidden" name="returnurl" value="index.html">
-							<div class="details">Color:<input type="text" name="color" size="10" maxlength="10"></div>
-							<div class="details">Size:<input type="text" name="size" size="10" maxlength="10"></div>
-							<div class="details">QTY:<input type="text" name="qty" size="10" maxlength="5"></div>
-							<img class="imgicon" src="resources/koozies.png">
-							<div class="addbutton">
-								<input type="image" src="resources/addbtn.png" name="neons" alt="Add to cart Button" width="105" height="45">
-								</div>
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="itembox">
-							<form action="php_files/addcart.php" method="post">
-							<input type="hidden" name="producturl" value="flags.png">
-							<input type="hidden" name="returnurl" value="index.html">
-							<div class="details">Color:<input type="text" name="color" size="10" maxlength="10"></div>
-							<div class="details">Size:<input type="text" name="size" size="10" maxlength="10"></div>
-							<div class="details">QTY:<input type="text" name="qty" size="10" maxlength="5"></div>
-							<img class="imgicon" src="resources/flags.png">
-							<div class="addbutton">
-								<input type="image" src="resources/addbtn.png" name="neons" alt="Add to cart Button" width="105" height="45">
-								</div>
-							</form>
-						</div>
-					</td>
-					<td>
-						<div class="itembox">
-							<form action="php_files/addcart.php" method="post">
-							<input type="hidden" name="producturl" value="t-shirts.png">
-							<input type="hidden" name="returnurl" value="index.html">
-							<div class="details">Color:<input type="text" name="color" size="10" maxlength="10"></div>
-							<div class="details">Size:<input type="text" name="size" size="10" maxlength="10"></div>
-							<div class="details">QTY:<input type="text" name="qty" size="10" maxlength="5"></div>
-							<img class="imgicon" src="resources/t-shirts.png">
-							<div class="addbutton">
-								<input type="image" src="resources/addbtn.png" name="neons" alt="Add to cart Button" width="105" height="45">
-								</div>
-							</form>
-						</div>
-					</td>
-				</tr>
-			</table>
+			
 	
 		</div>
-		<div id="cartview">
-			<div id="shoppingcart">Shopping Cart</div>
-			<div id="shoppingitems">
-				<table id="cartitemtable">
-				</table>
-				<script>
-					changecart();
-				</script>
-			<div id="checkout">
-				<a href="checkout.html">
-					<center><input type="image" src="resources/button1.png" alt="Check Out" width="150" height="40"></center>
-				</a>
-			</div>
-		</div>
-		<div class="clear">
-		</div>
+		
+		<div class="clear"></div>
     </div>
 		
 </body>
