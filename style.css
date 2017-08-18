@@ -61,10 +61,11 @@ div.loginbox{
 	height:280px;
 	width:400px; 
 	margin: auto;
-	margin-top: 130px;;
+	margin-top: 130px;
 	border: 1.5px solid black;
     border-radius: 5px;
 }
+
 
 div.logindetails{
 	margin:10% 2% 0 0;
@@ -93,6 +94,8 @@ input[type=text], input[type=password]{
 	background-color: #29201D;
 	color: white;
 	font-family:  Georgia, sans-serif;
+	border-color: darkgrey;
+	border-radius: 5px;
 }
 input#loginbutton {
 	color: white;
