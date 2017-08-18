@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div id="content">
-			<center><div class="loginbox">
+			<div class="loginbox">
 					<?php if(isset($_SESSION['badlogin'])){
 						if($_SESSION['badlogin']==true){
 							echo "Please try again";
@@ -38,18 +38,13 @@
 	-->
 
 
-						<div id="loginbtn">
+						<center><div id="loginbtn">
 							<br>
 							<input id="loginbutton" type="submit" value="Sign In">
-						</div>
-						<div class="loginoptions">
-							<br>
-							Forgot your password? &nbsp 
-								<a href="recover.html">Password Recovery</a>
-						</div>
+						</div><center>
 					</form>
 					<script src='https://www.google.com/recaptcha/api.js'></script>
-			</div></center>
+			</div>
 		</div>
 	</div>
 </body>
