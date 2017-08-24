@@ -185,7 +185,7 @@ div.accountrow {
 	font-size: 1em;
 }
 div.accountrow:hover {
-	background: #FFD700;
+	background: lightgray;
 	color: blue;
 	font-style: italic;
 }
@@ -194,7 +194,21 @@ div.accountrowempty {
 	height: 10px;
 	margin:0;
 }
-
+div.accountrowselected {
+	color: blue;
+	font-weight: bold;
+	height: 35px;
+	background: #FFD700;
+	text-align: center;
+	padding-top: 7px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	border-top: 2px solid grey;
+	border-bottom: 2px solid grey;
+	border-left: 2px solid grey;
+	border-radius: 12px 3px 3px 12px;
+	font-size: 1em;
+}
 
 div#maintablecontainer {
 	height: 700px;

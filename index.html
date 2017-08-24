@@ -46,11 +46,11 @@
 			<div id="accountswrapper" class="nano" >
 				<div class="content">
 					<div class="accountrowempty"></div>
-					<div class="accountrow">103 East</div>
-					<div class="accountrow">Hucks 365</div>
-					<div class="accountrow">Bella's Bistro</div>
-					<div class="accountrow">Hucks 386</div>
-					<div class="accountrow">Henry's Hotdogs</div>
+					<div id="ar1" class="accountrow" onclick="changeAccount('ar1')">103 East</div>
+					<div id="ar2" class="accountrow" onclick="changeAccount('ar2')">Hucks 365</div>
+					<div id="ar3" class="accountrow" onclick="changeAccount('ar3')">Bella's Bistro</div>
+					<div id="ar4" class="accountrow" onclick="changeAccount('ar4')">Hucks 386</div>
+					<div id="ar5" class="accountrow" onclick="changeAccount('ar5')">Henry's Hotdogs</div>
 				</div>
 			</div>
 		</div>
@@ -75,6 +75,17 @@
 		</div>
 		<div class="clear">
 		</div>
+		<script>
+			function changeAccount(accDiv){
+				var i, accounts,selectedaccount;
+				selectedaccount = document.getElementById(accDiv);
+				accounts=document.getElementsByClassName("accountrowselected");
+				for(i = 0; i<accounts.length; i++){
+					accounts[i].className = accounts[i].className.replace("accountrowselected", "accountrow");
+				}
+				selectedaccount.className = "accountrowselected";
+			}
+		</script>
 		<script>
 			$(".nano").nanoScroller();
 		</script>
