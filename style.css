@@ -1,3 +1,6 @@
+* {
+	box-sizing: border-box;
+}
 
 html, body { 
 	margin:0; 
@@ -13,17 +16,10 @@ body {
     background-repeat: no-repeat;
 }
 
-div#container{
-	width:100%;
-	height:100%; 
-	margin:0; 
-	padding:0; 
-	border:0;
-	}
 
 
 div#navcontainer { 
-	height:80px;
+	height:84px;
 	background:#000;
 	background: linear-gradient(to bottom,#000 0%,#232323 10%,#353535 18%,#232323 31%,#4c4c4c 50%,#000 100%);
 	border-bottom:4px solid #eb0303;
@@ -31,53 +27,44 @@ div#navcontainer {
 }
 
 div#navbar {
-	margin: 0;
-	padding: 0;
-	padding-left: 3px;
-	padding-top: 1px;
-	
+	padding-left: 5px;
 }
 div#imgcontainer {
-	margin-top: 7px;
-	margin-bottom: 10px;
-	padding-left: 2px;
-	width: 22.8%;
+	width: 23.076923077%;
 	display: inline-block;
+	text-align: center;
+	margin: 10px 0;
+}
+img#navlogo {
+	height: auto;
+	vertical-align: bottom;
 }
 div#navmenu{
-	margin-top: 7px;
-	margin-bottom: 10px;
-	padding-left: 2px;
 	width: 70%;
 	display: inline-block;
 }
-div#signout {
+div.navmenuitem {
 	color: white;
 	font-family: verdana, sans-serif;
 	font-size: 18px;
 	float: right;
+	margin-left:40px;
+	margin-right: 40px;
+	padding-bottom: 18px;
 }
-div#signout:after {
-	clear: right;
-}
-a#asignoff {
+
+a.navmenutext {
 	 text-decoration: none;
 	 color: white;
 	 font-style: normal;
+	 font-family: 'Roboto Condensed', sans-serif;
+	 letter-spacing: 1px;
+	 font-size: 16px;
 }
-a#asignoff:hover {
-	 font-style: italic;
-}
-div#content{
-	width:100%;
-	height: calc(100% - 85px); 
-	margin:0; 
-	padding:0; 
-	border:0;
-	padding-top: 1px;
-}
-img {
-	width:100%;
+a.navmenutext:hover {
+	color: #ed1c24;
+    font-weight: bold;
+	text-shadow: -1px -1px 2px #383838, 1px -1px 2px #383838, -1px 1px 2px #383838, 1px 1px 2px #383838;
 }
 
 div.loginbox{
@@ -156,21 +143,8 @@ input#loginbutton:active {
 	text-align:left;
 	margin-left:5%;
 }
-div#accountlistwrapper {
-	display: inline-block;
-	width: 20%;
-	height: 100%;
-}
-div#maintablewrapper{
-	display: inline-block;
-	width: 59%;
-	height: 100%;
-}
-div#settingswrapper{
-	display: inline-block;
-	width: 20%;
-	height: 100%;
-}
+
+
 div#accountlistcontainer {
 	height: 400px;
 	margin: auto;
@@ -178,6 +152,7 @@ div#accountlistcontainer {
 	margin: 25px;
 	box-shadow: 1px 1px 1px #888888;
 	border-radius: 5px;
+	display: inline-block;
 }
 div#maintablecontainer {
 	height: 550px;
@@ -186,36 +161,17 @@ div#maintablecontainer {
 	margin: 25px;
 	box-shadow: 1px 1px 1px #888888;
 	border-radius: 5px;
+	display: inline-block;
 }
-div#settingscontainer {
-	height: 400px;
-	margin: auto;
-	background: white;
-	box-shadow: 1px 1px 1px #888888;
-	margin: 25px;
-	border-radius: 5px;
-}
-div#accountlistlabel {
+
+div.containerlabel {
 	background-color: #333333;
 	font-family: Verdana, sans-serif;
 	color: white;
 	height: 40px;
 	width: 100%;
 }
-div#tablelistlabel {
-	background-color: #333333;
-	font-family: Verdana, sans-serif;
-	color: white;
-	height: 40px;
-	width: 100%;
-}
-div#settingstlistlabel{
-	background-color: #333333;
-	font-family: Verdana, sans-serif;
-	color: white;
-	height: 40px;
-	width: 100%;
-}
+
 ul#contenttable{
 	padding-top: 7px;
 }
@@ -225,7 +181,3 @@ li {
 	padding-right: 20px;
 }
 
-div.listlabels {
-	padding-top: 7px;
-	margin:0;
-}

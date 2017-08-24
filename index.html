@@ -1,54 +1,67 @@
-
+<?php
+	include 'php_files/functions.php';
+	session_start();
+	clearSessionBools();
+	if(isset($_SESSION['usr']) && isset($_SESSION['pswd'])){
+		//user logged in proceed
+	}else{
+		//not logged in, redirect to login
+		header("Location: login.html");
+		exit();
+	}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
 	<link rel="stylesheet" type="text/css" href="style.css">
-
-	<script>
-		
-	</script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
 	</head>
 	
 <body>
-	<div id="container">
 		<div id="navcontainer">
+		
 			<div id="navbar">
 				<div id="imgcontainer">
-					<img src="resources/AELogo2.png" />
+					<img id="navlogo" src="resources/AELogo2.png" />
 				</div>
 				<div id="navmenu">
-					<div id="signout">
-						<a id="asignoff" href="php_files/logoff.php">Sign Out</a>
+					<div class="navmenuitem">
+						<a class="navmenutext" href="php_files/logoff.php">SIGN OUT</a>
+					</div>
+					<div class="navmenuitem">
+						<a class="navmenutext" href="https://accelentertainment.com">BACK TO MAIN SITE</a>
+					</div>
+					<div class="clear">
 					</div>
 				</div>
+			</div>
+			
+		</div>
+			
+		<div id="accountlistcontainer">
+			<div class="containerlabel">Accounts
 			</div>
 		</div>
-		<div id="content">
-			<div id= "accountlistwrapper">
-				<div id="accountlistcontainer">
-					<div id="accountlistlabel"><center><div class="listlabels">Accounts</div></center>
-					</div>
-				</div>
+
+		<div id="maintablecontainer">
+			<div class="containerlabel">
+				<ul id="contenttable">
+					<li>VGT Reports</li>
+					<li>Foot Traffic Data</li>
+					<li>Absolute Edge Layout</li>
+					<li>Settings</li>
+				</ul>
 			</div>
-			<div id="maintablewrapper">
-				<div id="maintablecontainer">
-					<div id="tablelistlabel">
-						<ul id="contenttable">
-							<li>VGT Reports</li>
-							<li>Foot Traffic Data</li>
-							<li>Absolute Edge Layout</li>
-						</ul>
-					</div>
-				</div>
+			
+			<div id="contentreports">
 			</div>
-			<div id="settingswrapper">
-				<div id="settingscontainer">
-					<div id="settingstlistlabel"><center><div class="listlabels">Settings</div></center>
-					</div>
-				</div>
+			<div id="contentfoot">
+			</div>
+			<div id="contentabsolute">
+			</div>
+			<div id="contentsettings">
 			</div>
 		</div>
-	</div>
 		
 </body>
 </html>
