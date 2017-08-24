@@ -42,7 +42,31 @@ div#imgcontainer {
 	margin-bottom: 10px;
 	padding-left: 2px;
 	width: 22.8%;
-	
+	display: inline-block;
+}
+div#navmenu{
+	margin-top: 7px;
+	margin-bottom: 10px;
+	padding-left: 2px;
+	width: 70%;
+	display: inline-block;
+}
+div#signout {
+	color: white;
+	font-family: verdana, sans-serif;
+	font-size: 18px;
+	float: right;
+}
+div#signout:after {
+	clear: right;
+}
+a#asignoff {
+	 text-decoration: none;
+	 color: white;
+	 font-style: normal;
+}
+a#asignoff:hover {
+	 font-style: italic;
 }
 div#content{
 	width:100%;
@@ -132,6 +156,76 @@ input#loginbutton:active {
 	text-align:left;
 	margin-left:5%;
 }
+div#accountlistwrapper {
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+}
+div#maintablewrapper{
+	display: inline-block;
+	width: 59%;
+	height: 100%;
+}
+div#settingswrapper{
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+}
+div#accountlistcontainer {
+	height: 400px;
+	margin: auto;
+	background: white;
+	margin: 25px;
+	box-shadow: 1px 1px 1px #888888;
+	border-radius: 5px;
+}
+div#maintablecontainer {
+	height: 550px;
+	margin: auto;
+	background: white;
+	margin: 25px;
+	box-shadow: 1px 1px 1px #888888;
+	border-radius: 5px;
+}
+div#settingscontainer {
+	height: 400px;
+	margin: auto;
+	background: white;
+	box-shadow: 1px 1px 1px #888888;
+	margin: 25px;
+	border-radius: 5px;
+}
+div#accountlistlabel {
+	background-color: #333333;
+	font-family: Verdana, sans-serif;
+	color: white;
+	height: 40px;
+	width: 100%;
+}
+div#tablelistlabel {
+	background-color: #333333;
+	font-family: Verdana, sans-serif;
+	color: white;
+	height: 40px;
+	width: 100%;
+}
+div#settingstlistlabel{
+	background-color: #333333;
+	font-family: Verdana, sans-serif;
+	color: white;
+	height: 40px;
+	width: 100%;
+}
+ul#contenttable{
+	padding-top: 7px;
+}
+li {
+	display: inline;
+	padding-left:20px;
+	padding-right: 20px;
+}
 
-
-
+div.listlabels {
+	padding-top: 7px;
+	margin:0;
+}
