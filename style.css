@@ -27,17 +27,19 @@ div#navcontainer {
 }
 
 div#navbar {
-	padding-left: 5px;
+	padding-left: 3px;
 }
 div#imgcontainer {
 	width: 23.076923077%;
 	display: inline-block;
 	text-align: center;
 	margin: 10px 0;
+	
 }
 img#navlogo {
 	height: auto;
 	vertical-align: bottom;
+	margin-top: -2px;
 }
 div#navmenu{
 	width: 70%;
@@ -152,7 +154,7 @@ div#accountlistcontainer {
 	margin: 25px;
 	box-shadow: 1px 1px 1px #888888;
 	border-radius: 5px;
-	display: inline-block;
+	display:inline-block;
 }
 div#maintablecontainer {
 	height: 550px;
