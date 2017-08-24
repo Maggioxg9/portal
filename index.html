@@ -44,24 +44,40 @@
 		</div>
 
 		<div id="maintablecontainer">
-			<div class="containerlabel">
-				<ul id="contenttable">
-					<li>VGT Reports</li>
-					<li>Foot Traffic Data</li>
-					<li>Absolute Edge Layout</li>
-					<li>Settings</li>
-				</ul>
+			<div class="containerlabel2">
+					<button class="contenttablebutton contentbutton" onclick="changeTab(event, 'contentreports')">VGT Reports</button>
+					<button class="noborderradius contentbutton" onclick="changeTab(event, 'contentfoot')">Foot Traffic Data</button>
+					<button class="noborderradius contentbutton" onclick="changeTab(event, 'contentabsolute')">Absolute Edge Layout</button>
+					<button class="norightborder contentbutton" onclick="changeTab(event, 'contentsettings')">Settings</button>
 			</div>
-			
-			<div id="contentreports">
+			<div class="clear">
 			</div>
-			<div id="contentfoot">
+			<div id="contentreports" class="tabcontent">Linked BI360 Reports show here
 			</div>
-			<div id="contentabsolute">
+			<div id="contentfoot" class="tabcontent">Density IO data shows here
 			</div>
-			<div id="contentsettings">
+			<div id="contentabsolute" class="tabcontent">Field Inputs and iframe example window show here
+			</div>
+			<div id="contentsettings" class="tabcontent">User/Location settings show here
 			</div>
 		</div>
+		<div class="clear">
+		</div>
+		<script>
+			function changeTab(evt, divname) {
+				var i, tabcontent, tabbuttons;
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+				tabbuttons = document.getElementsByClassName("contentbutton");
+				for (i = 0; i < tabbuttons.length; i++) {
+					tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+				}
+				document.getElementById(divname).style.display = "block";
+				evt.currentTarget.className += " active";
+			}
+		</script>
 		
 </body>
 </html>

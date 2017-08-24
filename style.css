@@ -148,22 +148,24 @@ input#loginbutton:active {
 
 
 div#accountlistcontainer {
-	height: 400px;
-	margin: auto;
-	background: white;
-	margin: 25px;
-	box-shadow: 1px 1px 1px #888888;
+	height: 300px;
+	min-width: 200px;
+	background: #F8F8F8;
+	margin: 90px 25px 25px 25px;
+	box-shadow: 4px 4px 4px #BEBEBE;
 	border-radius: 5px;
-	display:inline-block;
+	float: left;
 }
 div#maintablecontainer {
-	height: 550px;
+	height: 700px;
+	max-height: calc(100% - 225px);
+	width: calc(100% - 400px);
 	margin: auto;
-	background: white;
-	margin: 25px;
-	box-shadow: 1px 1px 1px #888888;
+	background: #F8F8F8;
+	margin: 90px 25px 50px 25px;
+	box-shadow: 4px 4px 4px #BEBEBE;
 	border-radius: 5px;
-	display: inline-block;
+	float: left;
 }
 
 div.containerlabel {
@@ -171,15 +173,92 @@ div.containerlabel {
 	font-family: Verdana, sans-serif;
 	color: white;
 	height: 40px;
+	border-radius: 2px;
+	text-align: center;
+	padding-top: 8px;
 	width: 100%;
 }
-
-ul#contenttable{
-	padding-top: 7px;
+div.containerlabel2 {
+	background-color: #333333;
+	font-family: Verdana, sans-serif;
+	color: white;
+	height: 40px;
+	margin:auto;
+	margin-top: -40px;
+	border-radius: 20px;
+	width: 60%;
+	overflow: hidden;
 }
-li {
-	display: inline;
-	padding-left:20px;
-	padding-right: 20px;
+
+button.contenttablebutton {
+	background-color: #333333;
+	font-family: Verdana, sans-serif;
+	color: white;
+	float:left;
+	width: 25%;
+	border:none;
+	height: 100%;
+	cursor: pointer;
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 10px 0px 0px 10px;
+	border-right: 2px solid white;
 }
 
+button.norightborder {
+	background-color: #333333;
+	font-family: Verdana, sans-serif;
+	color: white;
+	float:left;
+	width: 25%;
+	border:none;
+	height: 100%;
+	cursor: pointer;
+	text-align: center;
+	border-radius:0px 10px 10px 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-right: none;
+}
+button.noborderradius{
+	background-color: #333333;
+	font-family: Verdana, sans-serif;
+	color: white;
+	float:left;
+	width: 25%;
+	border:none;
+	height: 100%;
+	cursor: pointer;
+	text-align: center;
+	border-radius:0px 0px 0px 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-right: 2px solid white;
+}
+button.contenttablebutton:hover {
+	background-color: red;
+}
+button.norightborder:hover {
+	background-color: red;
+}
+button.noborderradius:hover {
+	background-color: red;
+}
+button.contenttablebutton.active {
+	background-color: green;
+}
+button.norightborder.active {
+	background-color: green;
+}
+button.noborderradius.active {
+	background-color: green;
+}
+div.tabcontent {
+	display: none;
+	padding: 30px;
+}
+div#contentreports {
+	background: #F8F5E1;
+	height: 100%;
+}
