@@ -328,6 +328,19 @@ div#contentreports {
 	height: 100%;
 	
 }
+img.demoimg {
+	padding: 75px 200px 75px 300px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+img.demoimg2 {
+	width: 700px;
+	float: right;
+	margin-right: 400px;
+
+}
 
 
 /** initial setup **/
