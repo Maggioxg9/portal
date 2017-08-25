@@ -41,8 +41,7 @@
 		</div>
 			
 		<div id="accountlistcontainer">
-			<div class="containerlabel">Accounts
-			</div>
+			
 			<div id="accountswrapper" class="nano" >
 				<div class="content">
 					<div class="accountrowempty"></div>
@@ -64,6 +63,7 @@
 			</div>
 			<div class="clear">
 			</div>
+			<div id="contentwelcome">Welcome back Zachary, select a Location and Menu Option to get started</div>
 			<div id="contentreports" class="tabcontent">Linked BI360 Reports show here
 			</div>
 			<div id="contentfoot" class="tabcontent">Density IO data shows here
@@ -95,11 +95,13 @@
 				tabcontent = document.getElementsByClassName("tabcontent");
 				for (i = 0; i < tabcontent.length; i++) {
 					tabcontent[i].style.display = "none";
+					
 				}
 				tabbuttons = document.getElementsByClassName("contentbutton");
 				for (i = 0; i < tabbuttons.length; i++) {
 					tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
 				}
+				document.getElementById("contentwelcome").style.display = "none";
 				document.getElementById(divname).style.display = "block";
 				evt.currentTarget.className += " active";
 			}

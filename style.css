@@ -1,6 +1,9 @@
 * {
 	box-sizing: border-box;
 }
+*:focus {
+    outline: none;
+}
 
 html, body { 
 	margin:0; 
@@ -148,14 +151,9 @@ input#loginbutton:active {
 
 
 div#accountlistcontainer {
-	height: 275px;
+	height: 320px;
 	min-width: 200px;
-	background: #D3D3D3;
-	margin: 90px 25px 25px 25px;
-	box-shadow: 4px 4px 4px #BEBEBE;
-	border-right: 1px solid black;
-	border-bottom: 1px solid gray;
-	border-radius: 2px;
+	margin: 90px 0px 25px 25px;
 	float: left;
 }
 
@@ -170,9 +168,10 @@ div#content {
 }
 
 div.accountrow {
+	font-family: Verdana, sans-serif;
 	color:black;
 	font-weight: bold;
-	height: 35px;
+	height: 45px;
 	background: white;
 	text-align: center;
 	padding-top: 7px;
@@ -186,8 +185,6 @@ div.accountrow {
 }
 div.accountrow:hover {
 	background: lightgray;
-	color: blue;
-	font-style: italic;
 }
 
 div.accountrowempty {
@@ -195,10 +192,11 @@ div.accountrowempty {
 	margin:0;
 }
 div.accountrowselected {
-	color: blue;
-	font-weight: bold;
-	height: 35px;
-	background: #FFD700;
+	font-family: Verdana, sans-serif;
+	color: white;
+	font-weight: 550;
+	height: 45px;
+	background: red;
 	text-align: center;
 	padding-top: 7px;
 	margin-top: 15px;
@@ -216,9 +214,9 @@ div#maintablecontainer {
 	width: calc(100% - 400px);
 	margin: auto;
 	background: #F8F8F8;
-	margin: 90px 25px 50px 25px;
+	margin: 90px 25px 50px 0px;
 	box-shadow: 4px 4px 4px #BEBEBE;
-	border-radius: 5px;
+	border-radius: 8px;
 	float: left;
 }
 
@@ -291,26 +289,39 @@ button.noborderradius{
 	border-right: 2px solid white;
 }
 button.contenttablebutton:hover {
-	background-color: red;
+	background-color: lightgray;
+	color: black;
 }
 button.norightborder:hover {
-	background-color: red;
+	background-color: lightgray;
+	color: black;
 }
 button.noborderradius:hover {
-	background-color: red;
+	background-color: lightgray;
+	color: black;
 }
 button.contenttablebutton.active {
-	background-color: green;
+	background-color: red;
 }
 button.norightborder.active {
-	background-color: green;
+	background-color: red;
 }
 button.noborderradius.active {
-	background-color: green;
+	background-color: red;
 }
 div.tabcontent {
 	display: none;
 	padding: 30px;
+}
+div.tabcontent.active {
+	display: block;
+}
+div#contentwelcome {
+	display: block;
+	padding: 337px 100px 337px 100px;
+	text-align: center;
+	font-family: Verdana, sans-serif;
+	font-size: 26px;
 }
 div#contentreports {
 	background: #F8F5E1;
@@ -375,7 +386,7 @@ div#contentreports {
   opacity    : 0.99;
 }
 
-.nano { background: #bba; width: 5px; height: 40px; }
+.nano { width: 5px; height: 40px; }
 .nano .content { padding-left: 15px; 
 
 }
