@@ -14,5 +14,5 @@
 	curl_close($ch);
 	
 	$_SESSION['currentcount'] = $array['current_count'];
-
+	echo $_SESSION['currentcount'];
 ?>
