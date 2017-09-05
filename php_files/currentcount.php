@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	
-	$ch = curl_init("https://api.density.io/v1");
+	$ch = curl_init("https://api.density.io/v1/spaces/");
 	$auth = "Authorization: Bearer " . $_SESSION['api_token'];
 	
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
@@ -10,9 +10,9 @@
 		));
 	
 	$response = curl_exec($ch);
+	curl_close($ch)
 	echo $response;
 	$array = json_decode($response);
-	curl_close($ch);
 	
 	$_SESSION['currentcount'] = $array['current_count'];
 	echo $_SESSION['currentcount'];
