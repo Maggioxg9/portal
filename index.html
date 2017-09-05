@@ -4,6 +4,7 @@
 	clearSessionBools();
 	if(isset($_SESSION['usr']) && isset($_SESSION['pswd'])){
 		//user logged in proceed
+		$_SESSION['api_token']="tok_CcUbJqjQgYboQfYM4DuVHHIjdHuHFtjxlqeb0u9ZxCv";
 	}else{
 		//not logged in, redirect to login
 		header("Location: login.html");
@@ -16,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 	<script rel="text/javascript" src="nano.js"></script>
 	</head>
 	
@@ -65,10 +67,33 @@
 			</div>
 			<div id="contentwelcome">Welcome back Mark, select a Location and Menu Option to get started</div>
 			<div id="contentreports" class="tabcontent">Linked BI360 Reports show here
-				<img class="demoimg2" src="folders.jpg"></img>
 			</div>
-			<div id="contentfoot" class="tabcontent">Density IO data shows here
-				<img class="demoimg" src="density.png"></img>
+			<div id="contentfoot" class="tabcontent">
+				<div id="currentcountwrap" class="footwraps">
+					<div id="currentcountlabel" class="footlabels">Current Count
+					</div>
+					<div id="currentcountdisplay" class="footdisplay">
+					</div>
+				</div>
+				<div id="todaytotalwrap" class="footwraps">
+					<div id="todaytotallabel" class="footlabels">Today's Total
+					</div>
+					<div id="todaytotaldisplay" class="footdisplay">43
+					</div>
+				</div>
+				<div id="selecteddatetotalwrap" class="footwraps">
+					<div id="selecteddatetotallabel" class="footlabels">Selected Date Total
+					</div>
+					<div id="selecteddatetotaldisplay" class="footdisplay">785
+					</div>
+				</div>
+				<div id="countgraphwrap">
+					<div id="countgraph">
+						<canvas id="countcanvas">
+						</canvas>
+					</div>
+				</div>
+				
 			</div>
 			<div id="contentabsolute" class="tabcontent">Field Inputs and iframe example window show here
 			</div>
@@ -77,6 +102,49 @@
 		</div>
 		<div class="clear">
 		</div>
+		
+		<script>
+			function loadCurrentCount (
+		</script>
+		<script>
+			var ctx = document.getElementById("countcanvas").getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+					datasets: [{
+						label: 'Traffic Count',
+						data: [12, 19, 3, 5, 2, 3],
+						backgroundColor: [
+							'rgba(255, 99, 132, 0.2)',
+							'rgba(54, 162, 235, 0.2)',
+							'rgba(255, 206, 86, 0.2)',
+							'rgba(75, 192, 192, 0.2)',
+							'rgba(153, 102, 255, 0.2)',
+							'rgba(255, 159, 64, 0.2)'
+						],
+						borderColor: [
+							'rgba(255,99,132,1)',
+							'rgba(54, 162, 235, 1)',
+							'rgba(255, 206, 86, 1)',
+							'rgba(75, 192, 192, 1)',
+							'rgba(153, 102, 255, 1)',
+							'rgba(255, 159, 64, 1)'
+						],
+						borderWidth: 1
+					}]
+				},
+				options: {
+					scales: {
+						yAxes: [{
+							ticks: {
+								beginAtZero:true
+							}
+						}]
+					}
+				}
+			});
+		</script>
 		<script>
 			function changeAccount(accDiv){
 				var i, accounts,selectedaccount;

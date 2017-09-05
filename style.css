@@ -326,20 +326,55 @@ div#contentwelcome {
 div#contentreports {
 	background: #F8F5E1;
 	height: 100%;
+	border-radius: 8px;
 	
 }
-img.demoimg {
-	padding: 75px 200px 75px 300px;
-	display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden
+div#contentfoot {
+	background: #cffcff;
+	height: 100%;
+	border-radius: 8px;
+	
 }
-img.demoimg2 {
-	width: 700px;
-	float: right;
-	margin-right: 400px;
-
+div.footwraps {
+	height: 40%;
+	width: 28%;
+	display: inline-block;
+	margin-left: 4%;
+}
+div.footlabels{
+	font-family: Verdana, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	height: 30px;
+	padding-left: 5px;
+}
+div.footdisplay {
+	background: white;
+	margin-top: 5px;
+	font-family: Verdana, sans-serif;
+	height: calc(100% - 35px);
+	border-radius: 8px;
+	font-size: 60px;
+    text-align: center;
+    color: #4198FF;
+    font-weight: 600;
+	padding-top: 60px;
+	
+}
+div#countgraphwrap {
+	height: 60%;
+	width: 100%;
+}
+div#countgraph {
+	width: 90%;
+	margin:auto;
+	margin-top: 3%;
+	height: 80%;
+	background: white;
+}
+canvas#countcanvas {
+	max-width: 100%;
+	max-height: 100%;
 }
 
 
