@@ -10,6 +10,7 @@
 		));
 	
 	$response = curl_exec($ch);
+	echo $response;
 	$array = json_decode($response);
 	curl_close($ch);
 	
