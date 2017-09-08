@@ -15,4 +15,5 @@
 	$array = json_decode($response, true);
 	
 	$_SESSION['currentcount'] = $array['count'];
+	echo $_SESSION['currentcount'];
 ?>
