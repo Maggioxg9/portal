@@ -11,9 +11,9 @@
 	
 	$response = curl_exec($ch);
 	curl_close($ch);
-	echo $response;
-	//$array = json_decode($response);
 	
-	//$_SESSION['currentcount'] = $array['current_count'];
-	//echo $_SESSION['currentcount'];
+	$array = json_decode($response);
+	
+	$_SESSION['currentcount'] = $array['count'];
+	echo $_SESSION['currentcount'];
 ?>
