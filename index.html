@@ -104,7 +104,17 @@
 		</div>
 		
 		<script>
-			function loadCurrentCount (
+			(function updateCount(){
+				$.ajax({
+					url : 'php_files/currentcount.php', type : 'POST', success: function (result) {
+						document.getElementById('currentcountdisplay').innerHTML = result;
+						}, error : function() { console.log ('error');}
+						}).then(function () {
+							setTimeout(updateCount,5000);
+							});
+			})();
+				
+			
 		</script>
 		<script>
 			var ctx = document.getElementById("countcanvas").getContext('2d');
