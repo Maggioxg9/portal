@@ -104,7 +104,7 @@
 		</div>
 		
 		<script>
-			function updateCount(){
+			(function updateCount(){
 				$.ajax({
 					url : 'php_files/currentcount.php', type : 'POST', success: function (result) {
 						document.getElementById('currentcountdisplay').innerHTML = result;
@@ -112,7 +112,7 @@
 						}).then(function () {
 							setTimeout(updateCount,5000);
 							});
-			};
+			})();
 				
 			
 		</script>
