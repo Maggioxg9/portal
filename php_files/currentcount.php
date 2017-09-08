@@ -12,7 +12,7 @@
 	$response = curl_exec($ch);
 	curl_close($ch);
 	
-	$array = json_decode($response);
+	$array = json_decode($response, true);
 	
 	$_SESSION['currentcount'] = $array['count'];
 	echo $_SESSION['currentcount'];
