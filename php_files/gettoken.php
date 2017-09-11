@@ -2,7 +2,7 @@
 	session_start();
 	
 	$ch = curl_init('https://api.getdor.com/v1/tokens');
-	..$cont = "Content-Type: application/json";
+	//$cont = "Content-Type: application/json";
 	$auth = "refresh_token:30cYae0ATX7JqGBnEdwf9FNwCn6lOv";
 	
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
