@@ -17,8 +17,8 @@
 	$response = curl_exec($ch);
 	curl_close($ch);
 	
-	//$array = json_decode($response, true);
-	echo $response;
+	$array = json_decode($response, true);
+	echo $response['data']['token'];
 	//$_SESSION['apitoken'] = $array['token'];
 	
 ?>
