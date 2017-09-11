@@ -18,7 +18,7 @@
 	curl_close($ch);
 	
 	$array = json_decode($response, true);
-	print_r($array);
-	//$_SESSION['apitoken'] = $array['token'];
-	//echo $_SESSION['apitoken'];
+	
+	$_SESSION['apitoken'] = $array['token'];
+	echo $_SESSION['apitoken'];
 ?>
