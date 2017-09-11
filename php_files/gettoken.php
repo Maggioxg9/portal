@@ -20,5 +20,5 @@
 	//$array = json_decode($response, true);
 	//print_r($response);
 	//$_SESSION['apitoken'] = $array['token'];
-	print_r( $_POST );
+	var_dump($_POST);
 ?>
