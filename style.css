@@ -17,9 +17,15 @@ th{
 	
 }
 td{
-	height:50px;
+	height:70px;
+	width: 75px;
 background: white;
 border: 1px solid lightgray;	
+}
+table{
+	
+	border-spacing:0;
+	padding:0;
 }
 
 html, body { 
