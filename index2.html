@@ -35,7 +35,8 @@
 	for( $day = 1; $day <= $day_count; $day++, $str++){
 		$date = $ym.'-'.$day;
 		if($today == $date){
-			//$week .= '<td class="today">'.$day;
+			//add today formatting here
+			$week .= '<td>'.$day;
 		}else{
 		//add count data here
 			$week .= '<td>'.$day;
