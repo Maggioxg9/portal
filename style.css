@@ -12,10 +12,14 @@ th{
 	height:30px;
 	text-align: center;
 	font-weight: 700;
+	background: gray;
+	border: 1px solid black;
 	
 }
 td{
-	height:100px;	
+	height:50px;
+background: white;
+border: 1px solid lightgray;	
 }
 
 html, body { 
