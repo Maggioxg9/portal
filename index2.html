@@ -71,7 +71,7 @@
 				</div>
 				<div id="navmenu">
 					<div class="navmenuitem">
-						<a class="navmenutext" href="php_files/logoff.php">SIGN OUT</a>
+						<a class="navmenutext" onclick="clearLocal()" href="php_files/logoff.php">SIGN OUT</a>
 					</div>
 					<div class="navmenuitem">
 						<a class="navmenutext" href="https://accelentertainment.com">BACK TO MAIN SITE</a>
@@ -196,6 +196,12 @@
 				}
 			})();
 		</script>
+		<script>
+			function clearLocal(){
+				localStorage.clear();
+			}
+		</script>
+		
 		
 		
 </body>
