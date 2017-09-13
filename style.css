@@ -279,7 +279,7 @@ button.contenttablebutton {
 	font-family: Verdana, sans-serif;
 	color: white;
 	float:left;
-	width: 25%;
+	width: 20%;
 	border:none;
 	height: 100%;
 	cursor: pointer;
@@ -295,7 +295,7 @@ button.norightborder {
 	font-family: Verdana, sans-serif;
 	color: white;
 	float:left;
-	width: 25%;
+	width: 20%;
 	border:none;
 	height: 100%;
 	cursor: pointer;
@@ -310,7 +310,7 @@ button.noborderradius{
 	font-family: Verdana, sans-serif;
 	color: white;
 	float:left;
-	width: 25%;
+	width: 20%;
 	border:none;
 	height: 100%;
 	cursor: pointer;
@@ -361,9 +361,14 @@ div#contentreports {
 	border-radius: 8px;
 	
 }
-div#contentfoot {
-	 background: #cffcff; 
+div#calendarfoot {
+	background: #cffcff; 
+	height: 100%;
+	border-radius: 8px;
 	
+}
+div#graphfoot {
+	background: #cffcff; 
 	height: 100%;
 	border-radius: 8px;
 	

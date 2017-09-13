@@ -18,6 +18,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.print.css" rel="stylesheet">
 	<script rel="text/javascript" src="nano.js"></script>
 	<script type="text/javascript" src="caleandar.min.js"></script>
 	</head>
@@ -60,7 +63,8 @@
 		<div id="maintablecontainer">
 			<div class="containerlabel2">
 					<button class="contenttablebutton contentbutton" onclick="changeTab(event, 'contentreports')">VGT Reports</button>
-					<button class="noborderradius contentbutton" onclick="changeTab(event, 'contentfoot')">Foot Traffic Data</button>
+					<button class="noborderradius contentbutton" onclick="changeTab(event, 'calendarfoot')">Foot Traffic Calendar</button>
+					<button class="noborderradius contentbutton" onclick="changeTab(event, 'graphfoot')">Foot Traffic Graph</button>
 					<button class="noborderradius contentbutton" onclick="changeTab(event, 'contentabsolute')">Absolute Edge Layout</button>
 					<button class="norightborder contentbutton" onclick="changeTab(event, 'contentsettings')">Settings</button>
 			</div>
@@ -69,11 +73,12 @@
 			<div id="contentwelcome">Welcome back Mark, select a Location and Menu Option to get started</div>
 			<div id="contentreports" class="tabcontent">Linked BI360 Reports show here
 			</div>
-			<div id="contentfoot" class="tabcontent">
-				<img class="content" src="cal.png">
-				<img class="content" src="day.png">
-				<img class="exp" src="export.png">
+			<div id="calendarfoot" class="tabcontent">
+				<div id='calendar'></div>
 				
+			</div>
+			<div id="graphfoot" class="tabcontent">
+				graph here
 			</div>
 			<div id="contentabsolute" class="tabcontent">Field Inputs and iframe example window show here
 			</div>
@@ -83,19 +88,7 @@
 		<div class="clear">
 		</div>
 		
-		<script>
-			(function updateCount(){
-				$.ajax({
-					url : 'php_files/currentcount.php', type : 'POST', success: function (result) {
-						document.getElementById('currentcountdisplay').innerHTML = result;
-						}, error : function() { console.log ('error');}
-						}).then(function () {
-							setTimeout(updateCount,10000);
-							});
-			})();
-				
-			
-		</script>
+		
 		<script>
 			var ctx = document.getElementById("countcanvas").getContext('2d');
 			var myChart = new Chart(ctx, {
@@ -165,6 +158,18 @@
 				document.getElementById(divname).style.display = "block";
 				evt.currentTarget.className += " active";
 			}
+		</script>
+		<script>
+			$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+			defaultDate: "".<?php echo date("Y-m-d"); ?>,
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: []
+		});
+		
+	});
 		</script>
 		
 </body>

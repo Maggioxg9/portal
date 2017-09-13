@@ -20,5 +20,4 @@
 	$array = json_decode($response, true);
 
 	$_SESSION['apitoken'] = $array['data']['token'];
-	echo $_SESSION['apitoken'];
 ?>
