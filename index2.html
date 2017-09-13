@@ -190,7 +190,8 @@
 					document.getElementById("contentsettings").style.display = "block";
 					document.getElementById("b4").className += " active";
 				}
-				if(var sa=localStorage.getItem("selectedaccount")){
+				var sa=localStorage.getItem("selectedaccount")
+				if(sa){
 					document.getElementById(sa).className = "accountrowselected";
 				}
 			})();
