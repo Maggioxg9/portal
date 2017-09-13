@@ -106,7 +106,7 @@
 			</div>
 			<div class="clear">
 			</div>
-			<div id="contentwelcome">Welcome back Mark, select a Location and Menu Option to get started</div>
+			<div id="contentwelcome"></div>
 			<div id="contentreports" class="tabcontent">Linked BI360 Reports show here
 			</div>
 			<div id="contentfoot" class="tabcontent">
@@ -146,6 +146,7 @@
 					accounts[i].className = accounts[i].className.replace("accountrowselected", "accountrow");
 				}
 				selectedaccount.className = "accountrowselected";
+				localStorage.setItem("selectedAccount", accDiv);
 			}
 		</script>
 		<script>
@@ -188,6 +189,9 @@
 					document.getElementById("contentwelcome").style.display = "none";
 					document.getElementById("contentsettings").style.display = "block";
 					document.getElementById("b4").className += " active";
+				}
+				if(var sa=localStorage.getItem("selectedaccount")){
+					document.getElementById(sa).className = "accountrowselected";
 				}
 			})();
 		</script>
