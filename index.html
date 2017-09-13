@@ -18,11 +18,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.js"></script>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.min.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.5.1/fullcalendar.print.css" rel="stylesheet">
 	<script rel="text/javascript" src="nano.js"></script>
-	<script type="text/javascript" src="caleandar.min.js"></script>
 	</head>
 	
 <body>
@@ -74,11 +70,103 @@
 			<div id="contentreports" class="tabcontent">Linked BI360 Reports show here
 			</div>
 			<div id="calendarfoot" class="tabcontent">
-				<div id='calendar'></div>
+				<div id="calendarwrap">
+					<div id="calhead">
+						<div id="calprev"> < </div>
+						<div id="caltitle"> September 2017</div>
+						<div id="calnext"> > </div>
+					</div>
+					<div id="calbody">
+						<table>
+							<tr>
+								<th>Su</th>
+								<th>Mo</th>
+								<th>Tu</th>
+								<th>We</th>
+								<th>Th</th>
+								<th>Fr</th>
+								<th>Sa</th>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr><tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+								
+						</table>
+					</div>
+				</div>
+				<div id="calendardrilldownwrap">
+					<div id="drilldownheader">Hour by Hour</div>
+					<div id="drilldowncontent">
+					<br><br><br>
+						11pm - 12am<br>
+						10pm - 11pm<br>
+						9pm - 10pm<br>
+						8pm - 9pm<br>
+						7pm - 8pm<br>
+						6pm - 7pm<br>
+						5pm - 6pm<br>
+						4pm - 5pm<br>
+						3pm - 4pm<br>
+						2pm - 3pm<br>
+						1pm - 2pm<br>
+						12pm - 1pm<br>
+						11am - 12pm<br>
+						10am - 11am<br>
+						9am - 10am<br>
+						8am - 9am<br>
+						7am - 8am<br>
+						6am - 7am<br>
+						5am - 6am<br>
+						4am - 5am<br>
+						3am - 4am<br>
+						2am - 3am<br>
+						1am - 2am<br>
+						12am - 1am<br>
+					</div>
+				</div>
 				
 			</div>
 			<div id="graphfoot" class="tabcontent">
-				graph here
+				<canvas id = "countcanvas"></canvas>
 			</div>
 			<div id="contentabsolute" class="tabcontent">Field Inputs and iframe example window show here
 			</div>

@@ -17,22 +17,26 @@ img.exp {
 	margin-left: 60px;
 	
 }
+
 th{
-	height:30px;
+	height:35px;
+	width: 100px;
+	min-width: 100px;
 	text-align: center;
 	font-weight: 700;
-	background: gray;
+	background: white;
 	border: 1px solid black;
 	
 }
 td{
-	height:70px;
-	width: 75px;
-background: white;
-border: 1px solid lightgray;	
+	
+	width: 80px;
+	background: white;
+	border: 1px solid lightgray;	
 }
 table{
-	
+	width: 100%;
+	height: 100%;
 	border-spacing:0;
 	padding:0;
 }
@@ -343,7 +347,7 @@ button.noborderradius.active {
 }
 div.tabcontent {
 	display: none;
-	padding: 30px;
+	padding: 30px 30px 30px 40px;
 }
 div.tabcontent.active {
 	display: block;
@@ -362,13 +366,13 @@ div#contentreports {
 	
 }
 div#calendarfoot {
-	background: #cffcff; 
+	background: #F8F5E1; 
 	height: 100%;
 	border-radius: 8px;
 	
 }
 div#graphfoot {
-	background: #cffcff; 
+	background: white; 
 	height: 100%;
 	border-radius: 8px;
 	
@@ -399,20 +403,65 @@ div.footdisplay {
 	padding-top: 60px;
 	
 }
-div#countgraphwrap {
-	height: 60%;
+div#calendarwrap {
+	width: 700px;
+	min-width: 700px;
+	height: 100%;
+	float: left;
+}
+div#calendardrilldownwrap {
+	width: 200px;
+	min-width: 200px;
+	height:100%;
+	float: left;
+	padding-left: 150px;
+}
+div#calhead{
+	padding-top: 16px;
 	width: 100%;
+	height: 60px;
+	background: darkslategray;
+	color:white;
+	font-weight: 700;
+	font-size: 22px;
+	border-radius: 20px 20px 0 0;
 }
-div#countgraph {
-	width: 90%;
-	margin:auto;
-	margin-top: 3%;
-	height: 80%;
+div#calprev{
+	width:32%;
+	display: inline-block;
+	text-align: right;
+	
+}
+div#caltitle{
+	width:32%;
+	display:inline-block;
+	text-align: center;
+	
+}
+div#calnext{
+	width:32%;
+	display:inline-block;
+	text-align: left;
+}
+div#calbody{
+	height: calc(100% - 65px);
+}
+div#drilldownheader{
+	background: darkslategray;
+	color:white;
+	font-weight: 700;
+	font-size: 18px;
+	border-radius: 5px 5px 0 0;
+	width: 350px;
+	height: 60px;
+	text-align: center;
+	padding-top: 20px;
+	
+}
+div#drilldowncontent {
 	background: white;
-}
-canvas#countcanvas {
-	max-width: 100%;
-	max-height: 100%;
+	width: 350px;
+	height:580px;
 }
 
 
