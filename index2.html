@@ -165,8 +165,23 @@
 				document.getElementById("contentwelcome").style.display = "none";
 				document.getElementById(divname).style.display = "block";
 				evt.currentTarget.className += " active";
+				localStorage.setItem("activemenutab",divname);
 			}
 		</script>
+		<script>
+			(function pagereload(){
+				if(localStorage.getItem("activemenutab")=="contentreports"){
+					changeTab(event, 'contentreports');
+				}else if(localStorage.getItem("activemenutab")=="contentfoot"){
+					changeTab(event, 'contentfoot');
+				}else if(localStorage.getItem("activemenutab")=="contentabsolute"){
+					changeTab(event, 'contentabsolute');
+				}else if(localStorage.getItem("activemenutab")=="contentsettings"){
+					changeTab(event, 'contentsettings');
+				}
+			})();
+		</script>
+		
 		
 </body>
 </html>
