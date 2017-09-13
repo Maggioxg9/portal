@@ -4,6 +4,19 @@
 *:focus {
     outline: none;
 }
+a{
+	text-decoration:none;
+	
+}
+th{
+	height:30px;
+	text-align: center;
+	font-weight: 700;
+	
+}
+td{
+	height:100px;	
+}
 
 html, body { 
 	margin:0; 
