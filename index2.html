@@ -16,7 +16,7 @@
 	}else {
 		$ym = date('Y-m');
 	}
-	$today = date('Y-m-d', time()));
+	$today = date('Y-m-d', time());
 	$timestamp = strtotime($ym,"-01");
 	if ($timestamp === false) {
 		$timestamp = time();
