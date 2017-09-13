@@ -164,7 +164,8 @@
 				}
 				document.getElementById("contentwelcome").style.display = "none";
 				document.getElementById(divname).style.display = "block";
-				evt.currentTarget.className += " active";
+				//evt.currentTarget.className += " active";
+				document.getElementById(divname).className += " active";
 				localStorage.setItem("activemenutab",divname);
 			}
 		</script>
