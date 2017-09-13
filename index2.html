@@ -98,10 +98,10 @@
 
 		<div id="maintablecontainer">
 			<div class="containerlabel2">
-					<button class="contenttablebutton contentbutton" onclick="changeTab(event, 'contentreports')">VGT Reports</button>
-					<button class="noborderradius contentbutton" onclick="changeTab(event, 'contentfoot')">Foot Traffic Data</button>
-					<button class="noborderradius contentbutton" onclick="changeTab(event, 'contentabsolute')">Absolute Edge Layout</button>
-					<button class="norightborder contentbutton" onclick="changeTab(event, 'contentsettings')">Settings</button>
+					<button class="contenttablebutton contentbutton" id="b1" onclick="changeTab(event, 'contentreports')">VGT Reports</button>
+					<button class="noborderradius contentbutton" id="b2" onclick="changeTab(event, 'contentfoot')">Foot Traffic Data</button>
+					<button class="noborderradius contentbutton" id="b3" onclick="changeTab(event, 'contentabsolute')">Absolute Edge Layout</button>
+					<button class="norightborder contentbutton" id="b4" onclick="changeTab(event, 'contentsettings')">Settings</button>
 			</div>
 			<div class="clear">
 			</div>
@@ -164,7 +164,7 @@
 				}
 				document.getElementById("contentwelcome").style.display = "none";
 				document.getElementById(divname).style.display = "block";
-				//evt.currentTarget.className += " active";
+				evt.currentTarget.className += " active";
 				document.getElementById(divname).className += " active";
 				localStorage.setItem("activemenutab",divname);
 			}
@@ -172,13 +172,21 @@
 		<script>
 			(function pagereload(){
 				if(localStorage.getItem("activemenutab")=="contentreports"){
-					changeTab(event, 'contentreports');
+					document.getElementById("contentwelcome").style.display = "none";
+					document.getElementById("contentreports").style.display = "block";
+					document.getElementById("b1").className += " active";
 				}else if(localStorage.getItem("activemenutab")=="contentfoot"){
-					changeTab(event, 'contentfoot');
+					document.getElementById("contentwelcome").style.display = "none";
+					document.getElementById("contentfoot").style.display = "block";
+					document.getElementById("b2").className += " active";
 				}else if(localStorage.getItem("activemenutab")=="contentabsolute"){
-					changeTab(event, 'contentabsolute');
+					document.getElementById("contentwelcome").style.display = "none";
+					document.getElementById("contentabsolute").style.display = "block";
+					document.getElementById("b3").className += " active";
 				}else if(localStorage.getItem("activemenutab")=="contentsettings"){
-					changeTab(event, 'contentsettings');
+					document.getElementById("contentwelcome").style.display = "none";
+					document.getElementById("contentsettings").style.display = "block";
+					document.getElementById("b4").className += " active";
 				}
 			})();
 		</script>
