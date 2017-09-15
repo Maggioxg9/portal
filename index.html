@@ -19,6 +19,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 	<script rel="text/javascript" src="nano.js"></script>
+	<script rel="text/javascript" src="calendar.js"></script>
 	</head>
 	
 <body>
@@ -71,12 +72,12 @@
 			</div>
 			<div id="calendarfoot" class="tabcontent">
 				<div id="calendarwrap">
-					<div id="calhead">
-						<div id="calprev"> < </div>
-						<div id="caltitle"> September 2017</div>
-						<div id="calnext"> > </div>
+					<div id="calhead" class="calheadclass">
+						<div id="calprev" class="calprevbtn"> < </div>
+						<div id="caltitle"></div>
+						<div id="calnext" class="calnextbtn"> > </div>
 					</div>
-					<div id="calbody">
+					<div id="calbody" class="calbodyclass">
 						<table>
 							<tr>
 								<th>Su</th>
@@ -121,6 +122,15 @@
 								<td></td>
 								<td></td>
 							</tr><tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
 								<td></td>
 								<td></td>
 								<td></td>
@@ -248,16 +258,14 @@
 			}
 		</script>
 		<script>
-			$(document).ready(function() {
+			$(document).ready(
 
-		$('#calendar').fullCalendar({
-			defaultDate: "".<?php echo date("Y-m-d"); ?>,
-			editable: true,
-			eventLimit: true, // allow "more" link when too many events
-			events: []
-		});
+		 function()
+            {
+                $(".calendarwrap").calendar(new Date());
+            }
 		
-	});
+	);
 		</script>
 		
 </body>
