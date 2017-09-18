@@ -115,13 +115,13 @@ var refreshMonthTitle = function()
                         var cell = $(row.cells[i]).text(dy);
 
                         cell.removeClass();
-                        if (startd.valueOf() == selectedDate.valueOf())
+                        if (startd.valueOf() == selectedDate.valueOf()){
                             //cell.addClass('mopCalendarDaySelected');
-                        else if (md != month)
+                        }else if (md != month){
                             //cell.addClass('mopCalendarDayOdd');
-                        else if (wd == 0 || wd == 6)
+                        }else if (wd == 0 || wd == 6){
                             //cell.addClass('mopCalendarDayRed');
-
+						}
                         dy++;
                         startd.setDate(dy);
                     }
