@@ -95,11 +95,11 @@
 							}else{
 								var dy = startd.getDate();
 								var md = startd.getMonth();
-								if( md!= month && j==6){
+								if( md!= month){
 									//end of month
 									cell = $(row.cells[i]);
 									cell.removeClass();
-									cell.addClass('calendarDayHide');
+									cell = $(row.cells[i]).text(""); //blank text
 								}else {
 									//days
 									cell = $(row.cells[i]).text(dy); //add div for date text
@@ -112,6 +112,9 @@
 								startd.setDate(dy);
 							}
 						}
+					}
+					if(table[0].rows[6].cells[0].innerHTML=""){
+						alert("Found One");
 					}
 				};
 
