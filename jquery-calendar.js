@@ -113,7 +113,7 @@
 							}
 						}
 					}
-					if(table[0].rows[6].cells[0].innerHTML!=""){
+					if(table[0].rows[6].cells[0].innerHTML==""){
 							for( var i=0; i<7; i++){
 								table[0].rows[6].cells[i].addClass('calendarDayHide');
 							}
