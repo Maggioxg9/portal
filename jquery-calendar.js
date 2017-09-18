@@ -99,7 +99,7 @@
 									//end of month
 									cell = $(row.cells[i]);
 									cell.removeClass();
-									cell = $(row.cells[i]).text(""); //blank text
+									cell = $(row.cells[i]).text("5768"); //blank text
 								}else {
 									//days
 									cell = $(row.cells[i]).text(dy); //add div for date text
