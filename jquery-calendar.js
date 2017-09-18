@@ -77,27 +77,31 @@
 					var year = selectedYear;
 
 					var startd = new Date(year, month, 1);
-					var d1 = FirstDayOfWeek;
-					var d2 = startd.getDay();
-					var diff = d1 < d2 ? d2 - d1 : d1 + 7;
-					startd.setDate(startd.getDate() - diff);
+					//var d1 = FirstDayOfWeek;
+					//var d2 = startd.getWeekDay();
+					//var diff = d1 < d2 ? d2 - d1 : d1 + 7;
+					//startd.setDate(startd.getDate() - diff);
 
 					for (var j = 1; j < 7; j++) {
 						var row = table[0].rows[j];
 						for (var i = 0; i < 7; i++) {
 							var dy = startd.getDate();
-							var wd = startd.getDay();
 							var md = startd.getMonth();
-							var cell = $(row.cells[i]).text(dy);
-
-							cell.removeClass();
-							if (startd.valueOf() == selectedDate.valueOf()){
-								//cell.addClass('mopCalendarDaySelected');
-							}else if (md != month){
-								cell.addClass('calendarDayOdd');
-							}else if (wd == 0 || wd == 6){
-								//cell.addClass('mopCalendarDayRed');
-							}
+							var cell;
+							if( md!= month && j!=1){
+								//end of month
+								return;
+							}else if(md!= month){
+								//beginning of month
+								cell = $(row.cells[i]).text(""); //blank text
+							}else {
+								//days
+								cell = $(row.cells[i]).text(dy); //add div for date text
+								cell.removeClass();
+								if (startd.valueOf() == selectedDate.valueOf()){
+									//cell.addClass('mopCalendarDaySelected');
+								}
+							}	
 							dy++;
 							startd.setDate(dy);
 						}
