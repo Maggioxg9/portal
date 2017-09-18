@@ -18,15 +18,9 @@
 
 } (jQuery));
 
-var getValue = function()
-            {
-                return selectedDate;
-            };
-
-            var setValue = function(date)
-            {
-                if (date == null)
-                {
+var getValue = function(){ return selectedDate; };
+var setValue = function(date){
+                if (date == null){
                     selectedDate = null;
                     return;
                 }
@@ -39,28 +33,23 @@ var getValue = function()
             };
 
 
-var getDay = function()
-            {
+var getDay = function(){
                 return selectedDate.getDate();
             };
 
-            var getWeekDay = function()
-            {
+var getWeekDay = function(){
                 return selectedDate.getDay();
             };
 
-            var getMonth = function()
-            {
+var getMonth = function(){
                 return selectedDate.getMonth();
             };
 
-            var getYear = function()
-            {
+var getYear = function(){
                 return selectedDate.getFullYear();
             };
 
-            var setSelectedMonth = function(monthNum)
-            {
+var setSelectedMonth = function(monthNum){
                 if (monthNum == -1 && selectedMonth == 0)
                 {
                     selectedYear--;
@@ -80,22 +69,19 @@ var getDay = function()
                 refreshDayTable();
             };
 
-            var setSelectedYear = function(yearNum)
-            {
+var setSelectedYear = function(yearNum){
                 selectedYear = yearNum;
                 refreshMonthTitle();
                 refreshDayTable();
             };
-            var getContentTable = function () {
+var getContentTable = function () {
                 return $this.find('table');
             };
 
-var refreshMonthTitle = function()
-            {
+var refreshMonthTitle = function(){
                 var monthTitle = $('#caltitle').text(MonthNames[selectedMonth] + ', ' + selectedYear);
             };
-
-            var refreshDayTable = function () {
+var refreshDayTable = function () {
                 var table = getContentTable();
                 var month = selectedMonth;
                 var year = selectedYear;
@@ -128,8 +114,7 @@ var refreshMonthTitle = function()
                 }
             };
 
-var onHeaderClick = function(e)
-            {
+var onHeaderClick = function(e){
                 if (e.target)
                 {
                     var target = $(e.target);
@@ -143,7 +128,5 @@ var onHeaderClick = function(e)
             };
 
 $('.calheadclass').on('click', onHeaderClick);
-//$('.calbodyclass').on('click', onBodyClick);
-      
-//disable drag
-$this.on('selectstart dragstart', function (e) { e.preventDefault(); });
+$('.calbodyclass').on('click', onBodyClick);
+$(this).on('selectstart dragstart', function (e) { e.preventDefault(); });
