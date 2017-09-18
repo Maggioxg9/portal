@@ -29,6 +29,8 @@ th{
 	
 }
 td{
+	font-size: 22px;
+	font-family: Verdana, sans-serif;
 	text-align: right;
 	vertical-align:top;
 	padding-top: 5px;
