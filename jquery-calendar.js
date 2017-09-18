@@ -113,7 +113,7 @@
 							}
 						}
 					}
-					console.log(table[0].rows[6].cells[0].innerHTML);
+					console.log("content=".table[0].rows[6].cells[0].innerHTML);
 					
 					
 				};
