@@ -1,5 +1,4 @@
-(function($)
-{
+(function($){
     //global properties, depending on current language
     var MonthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     var FirstDayOfWeek = 0;
@@ -15,8 +14,6 @@
         {
         });
     };
-
-} (jQuery));
 
 var getValue = function(){ return selectedDate; };
 var setValue = function(date){
@@ -131,3 +128,4 @@ var onHeaderClick = function(e){
 
 //$('.calbodyclass').on('click', onBodyClick);
 //$(this).on('selectstart dragstart', function (e) { e.preventDefault(); });
+} (jQuery));
