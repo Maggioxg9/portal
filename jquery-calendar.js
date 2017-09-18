@@ -78,7 +78,7 @@
 
 					var startd = new Date(year, month, 1);
 					//var d1 = FirstDayOfWeek;
-					var d2 = startd.getWeekDay();
+					var d2 = getWeekDay();
 					//var diff = d1 < d2 ? d2 - d1 : d1 + 7;
 					//startd.setDate(startd.getDate() - diff);
 
