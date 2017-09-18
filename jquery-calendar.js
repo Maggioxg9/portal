@@ -113,7 +113,7 @@
 							}
 						}
 					}
-					var str= table.rows[6].cells[0].innerHTML;
+					var str= table[0].rows[6].cells[0].innerHTML;
 					console.log(str);
 					
 					
