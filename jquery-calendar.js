@@ -125,7 +125,7 @@ var onHeaderClick = function(e){
                 return false;
             };
 
-
+$('.calheadclass').on('click', onHeaderClick);
 //$('.calbodyclass').on('click', onBodyClick);
 //$(this).on('selectstart dragstart', function (e) { e.preventDefault(); });
 } (jQuery));
