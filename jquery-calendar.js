@@ -115,7 +115,7 @@
 					}
 					if(table[0].rows[6].cells[0].innerHTML==""){
 							for( var i=0; i<7; i++){
-								var cell= table[0].rows[6].cells[i];
+								var cell= $(table[0].rows[6].cells[i]);
 								cell.addClass('calendarDayHide');
 							}
 					}
