@@ -10,10 +10,6 @@
         var selectedMonth = selectedDate.getMonth();
         var selectedYear = selectedDate.getFullYear();
 
-        return this.each(function()
-        {
-        });
-    };
 
 var getValue = function(){ return selectedDate; };
 var setValue = function(date){
@@ -128,4 +124,9 @@ var onHeaderClick = function(e){
 $('.calheadclass').on('click', onHeaderClick);
 //$('.calbodyclass').on('click', onBodyClick);
 $this.on('selectstart dragstart', function (e) { e.preventDefault(); });
+
+	return this.each(function()
+        {
+        });
+    };
 } (jQuery));
