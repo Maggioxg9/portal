@@ -471,6 +471,9 @@ div#drilldowncontent {
 .calendarDayHide {
 	display:none;
 }
+.calendarDayGray {
+	background: lightgray;
+}
 
 
 /** nano bar styles **/

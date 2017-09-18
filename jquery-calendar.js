@@ -91,6 +91,7 @@
 							if(i<d2 && j==1){
 								//beginning of month
 								cell.removeClass();
+								cell.addClass('calendarDayGray');
 								cell = $(row.cells[i]).text(""); //blank text
 							}else{
 								var dy = startd.getDate();
@@ -99,6 +100,7 @@
 									//end of month
 									cell = $(row.cells[i]);
 									cell.removeClass();
+									cell.addClass('calendarDayGray');
 									cell = $(row.cells[i]).text(""); //blank text
 								}else {
 									//days
