@@ -88,7 +88,7 @@
 							var dy = startd.getDate();
 							var md = startd.getMonth();
 							var cell = $(row.cells[i]);
-							if(i<d2 && j=1){
+							if(i<d2 && j==1){
 								//beginning of month
 								cell.removeClass();
 								cell = $(row.cells[i]).text(""); //blank text
