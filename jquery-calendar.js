@@ -113,9 +113,10 @@
 							}
 						}
 					}
-					if(table[0].rows[6].cells[0].innerHTML=""){
-						alert("Found One");
+					if(table[0].rows[6].cells[0].text()==""){
+						table[0].rows[6].cells[0].text("hello");
 					}
+					
 				};
 
 		var onHeaderClick = function(e){
