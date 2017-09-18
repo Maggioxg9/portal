@@ -467,7 +467,7 @@ div#drilldowncontent {
 	height:580px;
 }
 .calendarDayOdd {
-	display:none;
+	color: lightgray;
 }
 
 
