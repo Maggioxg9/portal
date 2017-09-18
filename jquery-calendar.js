@@ -113,9 +113,8 @@
 							}
 						}
 					}
-					if(table[0].rows[6].cells[0].innerHTML==""){
-						table[0].rows[6].cells[0].text("hello");
-					}
+					console.log(table[0].rows[6].cells[0].innerHTML);
+					
 					
 				};
 
