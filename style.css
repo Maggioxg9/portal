@@ -466,6 +466,9 @@ div#drilldowncontent {
 	width: 350px;
 	height:580px;
 }
+.calendarDayOdd {
+	display:none;
+}
 
 
 /** nano bar styles **/

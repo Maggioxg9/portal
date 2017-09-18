@@ -94,7 +94,7 @@
 							if (startd.valueOf() == selectedDate.valueOf()){
 								//cell.addClass('mopCalendarDaySelected');
 							}else if (md != month){
-								//cell.addClass('mopCalendarDayOdd');
+								cell.addClass('calendarDayOdd');
 							}else if (wd == 0 || wd == 6){
 								//cell.addClass('mopCalendarDayRed');
 							}
