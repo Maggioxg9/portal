@@ -69,7 +69,7 @@
 				};
 
 		var refreshMonthTitle = function(){
-					var monthTitle = $('#caltitle').text(MonthNames[selectedMonth] + selectedYear);
+					var monthTitle = $('#caltitle').text(MonthNames[selectedMonth] +" "+ selectedYear);
 				};
 		var refreshDayTable = function () {
 					var table = getContentTable();
