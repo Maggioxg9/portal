@@ -143,7 +143,7 @@ var onHeaderClick = function(e)
             };
 
 $('.calheadclass').on('click', onHeaderClick);
- $('.calbodyclass').on('click', onBodyClick);
+//$('.calbodyclass').on('click', onBodyClick);
       
 //disable drag
 $this.on('selectstart dragstart', function (e) { e.preventDefault(); });
