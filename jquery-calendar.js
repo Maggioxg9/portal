@@ -119,10 +119,11 @@ var onHeaderClick = function(e){
                 {
                     var target = $(e.target);
             
-                    if (target.hasClass('calprevbtn'))
+                    if (target.hasClass('calprevbtn')){
                         setSelectedMonth(selectedMonth - 1);
-                    else if (target.hasClass('calnextbtn'))
+                    }else if (target.hasClass('calnextbtn')){
                         setSelectedMonth(selectedMonth + 1);
+					}
                 }
                 return false;
             };
