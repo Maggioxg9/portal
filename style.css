@@ -44,14 +44,13 @@ td{
 }
 table{
 	display: block;
+	width: 100% !important;
 	height: 100%;	
 	border-spacing:0;
 	padding:0;
 	border-collapse: collapse;
 }
-tbody {
-	width: 100%;
-}
+
 html, body { 
 	margin:0; 
 	padding:0; 
