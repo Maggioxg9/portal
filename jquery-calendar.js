@@ -103,7 +103,6 @@
 									cell = $(row.cells[i]).find('div').remove();
 									cell.removeClass();
 									cell.addClass('calendarDayGray');
-									cell = $(row.cells[i]).text(""); //blank text
 								}else {
 									//days
 									cell = $(row.cells[i]).find('div').remove();
