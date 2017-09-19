@@ -444,12 +444,14 @@ div#calprev{
 }
 div#calprevpointer {
 	cursor: pointer;
+	float: right;
 }
 div#calprevpointer:hover {
 	background: blue;
 }
 div#calnextpointer {
 	cursor: pointer;
+	float: left;
 }
 div#calnextpointer:hover {
 	background: blue;
