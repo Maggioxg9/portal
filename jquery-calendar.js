@@ -119,6 +119,8 @@
 									cell.removeClass();
 									if (startd.valueOf() == selectedDate.valueOf()){
 										cell.addClass('calendarDaySelected');
+										console.log(startd.date());
+										console.log(selectedDate);
 									}
 								}	
 								dy++;
