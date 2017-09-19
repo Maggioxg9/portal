@@ -486,9 +486,10 @@ div#drilldowncontent {
 .tdcalbody {
 		color: #8000FF;
 		height: 24px;
-		font-wight: bold;
+		font-weight: bold;
 		font-size: 24px;
 		padding-left: 10px;
+		text-align: left;
 		width: 100%;
 }
 .tdcalnotes {
