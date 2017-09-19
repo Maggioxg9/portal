@@ -441,6 +441,20 @@ div#calprev{
 	text-align: right;
 	
 }
+div#calprevpointer {
+	cursor: pointer;
+	float: left;
+}
+div#calprevpointer:hover {
+	background: blue;
+}
+div#calnextpointer {
+	cursor: pointer;
+	float: right;
+}
+div#calnextpointer:hover {
+	background: blue;
+}
 div#caltitle{
 	width:32%;
 	display:inline-block;
