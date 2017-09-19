@@ -1,158 +1,19 @@
-/* SQL Marketing Database creation */
+/* SQL Portal Database creation */
 
-drop database marketing;
+drop database portal;
 
-create database marketing;
+create database portal;
 
-use marketing;
+use portal;
 
-create table users (userid int NOT NULL AUTO_INCREMENT, username varchar(
-255) NOT NULL, password varchar(255) NOT NULL, level int not null, email varchar(255), firstname varchar(255), lastname varchar(255), phone varchar(50), rep varchar(255),code int,recovery int, PRIMARY KEY (userid));
+create table users (userid int unsigned NOT NULL AUTO_INCREMENT, username varchar(
+255) NOT NULL, password varchar(255) NOT NULL, type int not null, level int not null, email varchar(255), firstname varchar(255), lastname varchar(255), PRIMARY KEY (userid));
 
-create table carts (cartid int NOT NULL auto_increment, userid int NOT NULL, foreign key
- (userid) references users (userid), PRIMARY KEY (cartid));
-
-create table orders (orderid int not null auto_increment, userid int not null, orderdate
- datetime not null, foreign key (userid) references users (userid), primary key(orderid));
-
-create table requests (requestid int not null auto_increment, sender int not null, receiver int not null, orderdate
- datetime not null, locationname varchar(255) not null, foreign key (sender) references users (userid),foreign key (receiver) references users (userid), primary key(requestid));
-
-create table products (productid int not null auto_increment, name varchar(255) not null, description varchar(255), pageurl varchar(255) not null, primary key(productid));
-
-create table cartitems (cartitemid int not null auto_increment, cartid int not null, productid int not null, ud1 varchar(255), ud2 varchar(255), ud3 varchar(255), ud4 varchar(255), ud5 varchar(255), ud6 varchar(255), comments varchar(255), foreign key (cartid) references carts(cartid), foreign key (productid) references products(productid), primary key(cartitemid)); 
-
-create table requestitems (requestitemid int not null auto_increment, requestid int not null, productid int not null, ud1 varchar(255), ud2 varchar(255), ud3 varchar(255), ud4 varchar(255), ud5 varchar(255), ud6 varchar(255), comments varchar(255), foreign key (requestid) references requests(requestid), foreign key (productid) references products(productid), primary key(requestitemid)); 
-
-create table orderitems (orderitemid int not null auto_increment, orderid int not null, productid int not null, ud1 varchar(255), ud2 varchar(255), ud3 varchar(255), ud4 varchar(255), ud5 varchar(255), ud6 varchar(255), comments varchar(255), foreign key (orderid) references orders(orderid), foreign key (productid) references products(productid), primary key(orderitemid));
-
-insert into users (username, password, level, email, firstname, lastname, phone, code, recovery) values ("zacharym", "$2y$10$kc5RNma6lNfWh1wZ6nYQBevwP.GEGKojbMT09QgqWGiipQIyvEWdy", "1", "ZacharyM@accelentertainment.com", "Zach", "Maggio", "260-667-8932", 919455319, 184759622);
-
-insert into users (username,password,  level, email, firstname, lastname, phone, code, recovery) values ("brads", "$2y$10$38O2.g4HwntCeUsmVwQ.teRI8tfcwmTLc13JftqUbDpHpQCcMsPYG", "2", "BradS@accelentertainment.com", "Brad", "Shapiro", "913-596-8950", 888888888, 758362749);
-
-insert into users (username, password, level, email, firstname, lastname, phone, code, recovery) values ("johnd", "$2y$10$kc5RNma6lNfWh1wZ6nYQBevwP.GEGKojbMT09QgqWGiipQIyvEWdy", "4", "ZacharyM@accelentertainment.com", "John", "Doe", "123-456-7899", 999999999, 232418935);
-
-insert into users (username, password, level, email, firstname, lastname, phone, rep, recovery) values ("janed", "$2y$10$kc5RNma6lNfWh1wZ6nYQBevwP.GEGKojbMT09QgqWGiipQIyvEWdy", "4", "ZacharyM@accelentertainment.com", "Jane", "Doe", "123-456-7899", "brads",748599927);
-
-insert into users (username, password, level, email, firstname, lastname, phone, rep, recovery) values ("joeyd", "$2y$10$kc5RNma6lNfWh1wZ6nYQBevwP.GEGKojbMT09QgqWGiipQIyvEWdy", "4", "ZacharyM@accelentertainment.com", "Joey", "Doe", "123-456-7899", "brads", 884957465);
-
-insert into carts (userid) values ("1");
-
-insert into carts (userid) values ("2");
-
-insert into products (name, description, pageurl) values ("Neons", "Red and Green Lights", "neons.png");
-
-insert into products (name, description, pageurl) values ("Coasters", "Drink Absorbers", "coasters.png");
-
-insert into products (name, description, pageurl) values ("Koozies", "Drink Signs", "koozies.png");
-
-insert into products (name, description, pageurl) values ("Flags", "Slot Flags", "flags.png");
-
-insert into products (name, description, pageurl) values ("T-Shirts", "Women T-Shirts", "t-shirts.png");
-
-insert into products (name, description, pageurl) values ("Seat Cards", "Reading Cards for Seats", "seatcards.png");
+create table locations (locationid int unsigned not null auto_increment, name varchar(255) not null, webcode int unsigned not null, primary key (locationid));
+create table daytraffic (daytrafficid int unsigned not null auto_increment, trafficdate datetime not null, in_count int not null, out_count int not null, daytrafficlocationid int unsigned not null, weather_zip varchar(5), weather_min_temp varchar(6), weather_max_temp varchar(6), weather_summary varchar(20), weather_coverage varchar(20), weather_intensity varchar(20), weather_type varchar(20), foreign key (daytrafficlocationid) references locations (locationid), primary key (daytrafficid));
+create table hourtraffic (hourtrafficid int unsigned not null auto_increment, hour datetime not null, in_count int, out_count int, hourdaytrafficid int unsigned not null, foreign key (hourdaytrafficid) references daytraffic (daytrafficid), primary key (hourtrafficid));
+create table userlocation (userlocationid int unsigned not null auto_increment, userlocationuserid int unsigned not null, userlocationlocationid int unsigned not null, foreign key (userlocationuserid) references users (userid),foreign key (userlocationlocationid) references locations (locationid), primary key (userlocationid));
 
 
-______________________________________________________________
+insert into users (username, password, type, level, email, firstname, lastname) values ("zacharym", "$2y$10$kc5RNma6lNfWh1wZ6nYQBevwP.GEGKojbMT09QgqWGiipQIyvEWdy", "1", "1", "ZacharyM@accelentertainment.com", "Zach", "Maggio");
 
-
-mysql> show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| marketing          |
-| mysql              |
-| performance_schema |
-| test               |
-+--------------------+
-5 rows in set (0.00 sec)
-
-mysql> use marketing;
-Database changed
-mysql> show tables;
-+---------------------+
-| Tables_in_marketing |
-+---------------------+
-| cartitems           |
-| carts               |
-| orderitems          |
-| orders              |
-| products            |
-| users               |
-+---------------------+
-6 rows in set (0.00 sec)
-
-mysql> show columns from users;
-+----------+--------------+------+-----+---------+----------------+
-| Field    | Type         | Null | Key | Default | Extra          |
-+----------+--------------+------+-----+---------+----------------+
-| userid   | int(11)      | NO   | PRI | NULL    | auto_increment |
-| username | varchar(255) | NO   |     | NULL    |                |
-| password | varchar(255) | NO   |     | NULL    |                |
-+----------+--------------+------+-----+---------+----------------+
-3 rows in set (0.02 sec)
-
-mysql> show columns from carts;
-+--------+---------+------+-----+---------+-------+
-| Field  | Type    | Null | Key | Default | Extra |
-+--------+---------+------+-----+---------+-------+
-| cartid | int(11) | NO   | PRI | NULL    |       |
-| userid | int(11) | NO   | MUL | NULL    |       |
-+--------+---------+------+-----+---------+-------+
-2 rows in set (0.01 sec)
-
-mysql> show columns from orders;
-+-----------+----------+------+-----+---------+-------+
-| Field     | Type     | Null | Key | Default | Extra |
-+-----------+----------+------+-----+---------+-------+
-| orderid   | int(11)  | NO   | PRI | NULL    |       |
-| userid    | int(11)  | NO   | MUL | NULL    |       |
-| orderdate | datetime | NO   |     | NULL    |       |
-+-----------+----------+------+-----+---------+-------+
-3 rows in set (0.02 sec)
-
-mysql> show columns from products;
-+-------------+--------------+------+-----+---------+-------+
-| Field       | Type         | Null | Key | Default | Extra |
-+-------------+--------------+------+-----+---------+-------+
-| productid   | int(11)      | NO   | PRI | NULL    |       |
-| name        | varchar(255) | NO   |     | NULL    |       |
-| description | varchar(255) | YES  |     | NULL    |       |
-| pageurl     | varchar(255) | NO   |     | NULL    |       |
-+-------------+--------------+------+-----+---------+-------+
-4 rows in set (0.03 sec)
-
-mysql> show columns from cartitems;
-+------------+--------------+------+-----+---------+----------------+
-| Field      | Type         | Null | Key | Default | Extra          |
-+------------+--------------+------+-----+---------+----------------+
-| cartitemid | int(11)      | NO   | PRI | NULL    | auto_increment |
-| cartid     | int(11)      | NO   | MUL | NULL    |                |
-| productid  | int(11)      | NO   | MUL | NULL    |                |
-| ud1        | varchar(255) | YES  |     | NULL    |                |
-| ud2        | varchar(255) | YES  |     | NULL    |                |
-| ud3        | varchar(255) | YES  |     | NULL    |                |
-| ud4        | varchar(255) | YES  |     | NULL    |                |
-| ud5        | varchar(255) | YES  |     | NULL    |                |
-| ud6        | varchar(255) | YES  |     | NULL    |                |
-| comments   | varchar(255) | YES  |     | NULL    |                |
-+------------+--------------+------+-----+---------+----------------+
-10 rows in set (0.02 sec)
-
-mysql> show columns from orderitems;
-+-------------+--------------+------+-----+---------+----------------+
-| Field       | Type         | Null | Key | Default | Extra          |
-+-------------+--------------+------+-----+---------+----------------+
-| orderitemid | int(11)      | NO   | PRI | NULL    | auto_increment |
-| orderid     | int(11)      | NO   | MUL | NULL    |                |
-| productid   | int(11)      | NO   | MUL | NULL    |                |
-| ud1         | varchar(255) | YES  |     | NULL    |                |
-| ud2         | varchar(255) | YES  |     | NULL    |                |
-| ud3         | varchar(255) | YES  |     | NULL    |                |
-| ud4         | varchar(255) | YES  |     | NULL    |                |
-| ud5         | varchar(255) | YES  |     | NULL    |                |
-| ud6         | varchar(255) | YES  |     | NULL    |                |
-| comments    | varchar(255) | YES  |     | NULL    |                |
-+-------------+--------------+------+-----+---------+----------------+
-10 rows in set (0.02 sec)
