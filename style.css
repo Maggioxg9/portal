@@ -440,6 +440,7 @@ div#calhead{
 div#calprev{
 	width:32%;
 	display: flex;
+	flex-direction: row-reverse;
 	text-align: right;
 	
 }
