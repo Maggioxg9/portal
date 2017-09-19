@@ -114,7 +114,7 @@
 									}
 									cell.removeClass();
 									if (startd.valueOf() == selectedDate.valueOf()){
-										//cell.addClass('mopCalendarDaySelected');
+										cell.addClass('calendarDaySelected');
 									}
 								}	
 								dy++;

@@ -446,10 +446,10 @@ div#calprev{
 	
 }
 div#calprevpointer {
-	cursor: pointer;
+
 }
 div#calnextpointer {
-	cursor: pointer;
+	
 }
 div#caltitle{
 	width:32%;
@@ -496,6 +496,9 @@ div#drilldowncontent {
 }
 .calendarDayGray {
 	background:	#E8E8E8;
+}
+.calendarDaySelected {
+	background: orange:
 }
 .tdcaltext {
 		height: 12px;
