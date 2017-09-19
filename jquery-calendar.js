@@ -90,7 +90,8 @@
 							var cell = $(row.cells[i]);
 							if(i<d2 && j==1){
 								//beginning of month
-								cell.removeClass();
+								cell = $(row.cells[i]).find('div').remove();
+								cell.removeClass();	
 								cell.addClass('calendarDayGray');
 								cell = $(row.cells[i]).text(""); //blank text
 							}else{
@@ -99,15 +100,17 @@
 								if( md!= month){
 									//end of month
 									cell = $(row.cells[i]);
+									cell = $(row.cells[i]).find('div').remove();
 									cell.removeClass();
 									cell.addClass('calendarDayGray');
 									cell = $(row.cells[i]).text(""); //blank text
 								}else {
 									//days
-									cell.removeClass();
+									cell = $(row.cells[i]).find('div').remove();
 									cell = $(row.cells[i]).append('<div class="tdcaltext">'+dy+'</div>'); //add div for date text
 									cell = $(row.cells[i]).append('<div class="tdcalbody">'+Math.floor(Math.random()*100)+'</div>');
 									cell = $(row.cells[i]).append('<div class="tdcalnotes"></div>');
+									cell.removeClass();
 									if (startd.valueOf() == selectedDate.valueOf()){
 										//cell.addClass('mopCalendarDaySelected');
 									}
