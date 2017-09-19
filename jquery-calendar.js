@@ -90,10 +90,9 @@
 							var cell = $(row.cells[i]);
 							if(i<d2 && j==1){
 								//beginning of month
-								cell = $(row.cells[i]).find('div').remove();
 								cell.removeClass();	
 								cell.addClass('calendarDayGray');
-								cell = $(row.cells[i]).text(""); //blank text
+								$(row.cells[i]).find('div').remove();
 							}else{
 								var dy = startd.getDate();
 								var md = startd.getMonth();
@@ -105,13 +104,13 @@
 									$(row.cells[i]).find('div').remove();
 								}else {
 									//days
-									cell = $(row.cells[i]).find('div').remove();
-									cell = $(row.cells[i]).append('<div class="tdcaltext">'+dy+'</div>'); //add div for date text
-									cell = $(row.cells[i]).append('<div class="tdcalbody">'+Math.floor(Math.random()*100)+'</div>');
+									$(row.cells[i]).find('div').remove();
+									$(row.cells[i]).append('<div class="tdcaltext">'+dy+'</div>'); //add div for date text
+									$(row.cells[i]).append('<div class="tdcalbody">'+Math.floor(Math.random()*100)+'</div>');
 									if(i%2&&j%3){
-											cell = $(row.cells[i]).append('<div class="tdcalnotes">marketing event started, had lot of people</div>');
+											$(row.cells[i]).append('<div class="tdcalnotes">marketing event started, had lot of people</div>');
 									}else{
-										cell = $(row.cells[i]).append('<div class="tdcalnotes"></div>');
+										$(row.cells[i]).append('<div class="tdcalnotes"></div>');
 									}
 									cell.removeClass();
 									if (startd.valueOf() == selectedDate.valueOf()){
