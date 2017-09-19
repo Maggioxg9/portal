@@ -106,7 +106,7 @@
 									//days
 									$(row.cells[i]).find('div').remove();
 									$(row.cells[i]).append('<div class="tdcaltext">'+dy+'</div>'); //add div for date text
-									$(row.cells[i]).append('<div class="tdcalbody">'+Math.floor(Math.random()*100)+'</div>');
+									$(row.cells[i]).append('<div class="tdcalbody">'+Math.floor(Math.random()*1000)+'</div>');
 									if(i%2&&j%3){
 											$(row.cells[i]).append('<div class="tdcalnotes">marketing event started, had lot of people</div>');
 									}else{
