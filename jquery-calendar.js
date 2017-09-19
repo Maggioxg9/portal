@@ -109,7 +109,11 @@
 									cell = $(row.cells[i]).find('div').remove();
 									cell = $(row.cells[i]).append('<div class="tdcaltext">'+dy+'</div>'); //add div for date text
 									cell = $(row.cells[i]).append('<div class="tdcalbody">'+Math.floor(Math.random()*100)+'</div>');
-									cell = $(row.cells[i]).append('<div class="tdcalnotes"></div>');
+									if((i+j)%4){
+											cell = $(row.cells[i]).append('<div class="tdcalnotes">marketing event started, had lot of people</div>');
+									}else{
+										cell = $(row.cells[i]).append('<div class="tdcalnotes"></div>');
+									}
 									cell.removeClass();
 									if (startd.valueOf() == selectedDate.valueOf()){
 										//cell.addClass('mopCalendarDaySelected');
