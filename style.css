@@ -50,6 +50,7 @@ table{
 	border-spacing:0;
 	padding:0;
 	border-collapse: collapse;
+	table-layout:fixed;
 }
 
 html, body { 
