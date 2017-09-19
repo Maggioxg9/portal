@@ -417,6 +417,7 @@ div#calendarwrap {
 	min-width: 700px;
 	height: 100%;
 	float: left;
+	display: table;
 }
 div#calendardrilldownwrap {
 	width: 200px;
