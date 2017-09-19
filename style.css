@@ -30,6 +30,7 @@ th{
 	font-weight: 700;
 	background: white;
 	border: 1px solid black;
+	border-collapse: collapse;
 	
 }
 td{
@@ -50,8 +51,6 @@ table{
 	max-width: 100% !important;
 	border-spacing:0;
 	padding:0;
-	border-collapse: collapse;
-	box-sizing: content-box;
 }
 
 html, body { 
