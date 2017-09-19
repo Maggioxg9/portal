@@ -74,7 +74,7 @@
 		var refreshDayTable = function () {
 					var table = getContentTable();
 					var month = selectedMonth;
-					var year = selectedYear.getFullYear();
+					var year = selectedYear;
 
 					var startd = new Date(year, month, 1);
 					//var d1 = FirstDayOfWeek;
@@ -96,7 +96,7 @@
 							}else{
 								var dy = startd.getDate();
 								var md = startd.getMonth();
-								var yy = startd.getYear();
+								var yy = startd.getFullYear();
 								if( md!= month){
 									//end of month
 									cell = $(row.cells[i]);
