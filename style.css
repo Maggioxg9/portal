@@ -458,7 +458,11 @@ div#caltitle{
 	cursor: default;
 	justify-content: center;
 }
-span.calbtn:hover{
+span.calprevbtn:hover{
+	background: blue;
+	cursor: pointer;
+}
+span.calnextbtn:hover{
 	background: blue;
 	cursor: pointer;
 }
