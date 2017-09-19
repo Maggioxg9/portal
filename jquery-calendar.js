@@ -104,8 +104,10 @@
 									cell = $(row.cells[i]).text(""); //blank text
 								}else {
 									//days
-									cell = $(row.cells[i]).text(dy); //add div for date text
 									cell.removeClass();
+									cell = $(row.cells[i]).append('<div class="tdcaltext">'+dy+'</div>'); //add div for date text
+									cell = $(row.cells[i]).append('<div class="tdcalbody">'+Math.random()*100+'</div>');
+									cell = $(row.cells[i]).append('<div class="tdcalnotes"></div>');
 									if (startd.valueOf() == selectedDate.valueOf()){
 										//cell.addClass('mopCalendarDaySelected');
 									}

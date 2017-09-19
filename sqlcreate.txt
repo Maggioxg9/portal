@@ -16,4 +16,11 @@ create table userlocation (userlocationid int unsigned not null auto_increment, 
 
 
 insert into users (username, password, type, level, email, firstname, lastname) values ("zacharym", "$2y$10$kc5RNma6lNfWh1wZ6nYQBevwP.GEGKojbMT09QgqWGiipQIyvEWdy", "1", "1", "ZacharyM@accelentertainment.com", "Zach", "Maggio");
-
+insert into locations (name, webcode) values ("103 East", "55555");
+insert into locations (name, webcode) values ("Hucks 365", "66666");
+insert into daytraffic (trafficdate, in_count, out_count, daytrafficlocationid) values ('20170918', "36", "25", "1");
+insert into daytraffic (trafficdate, in_count, out_count, daytrafficlocationid) values ('20170917', "33", "30", "1");
+insert into daytraffic (trafficdate, in_count, out_count, daytrafficlocationid) values ('20170916', "23", "14", "1");
+insert into daytraffic (trafficdate, in_count, out_count, daytrafficlocationid) values ('20170918', "76", "23", "2");
+insert into daytraffic (trafficdate, in_count, out_count, daytrafficlocationid) values ('20170917', "43", "38", "2");
+insert into daytraffic (trafficdate, in_count, out_count, daytrafficlocationid) values ('20170916', "63", "24", "2");

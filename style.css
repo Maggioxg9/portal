@@ -477,7 +477,23 @@ div#drilldowncontent {
 .calendarDayGray {
 	background:	#E8E8E8;
 }
-
+.tdcaltext {
+		height: 12px;
+		line-height: 12px;
+		text-align: right;
+		width: 100%;
+}
+.tdcalbody {
+		color: fusia;
+		height: 24px;
+		padding-left: 10px;
+		width: 100%;
+}
+.tdcalnotes {
+		color: black;
+		height: calc(100% - 36px);
+		width: 100%;
+}
 
 /** nano bar styles **/
 .nano {
