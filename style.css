@@ -484,8 +484,10 @@ div#drilldowncontent {
 		width: 100%;
 }
 .tdcalbody {
-		color: fusia;
+		color: #8000FF;
 		height: 24px;
+		font-wight: bold;
+		font-size: 24px;
 		padding-left: 10px;
 		width: 100%;
 }
