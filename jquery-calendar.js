@@ -120,7 +120,7 @@
 									cell.removeClass();
 									if (startd.valueOf() == selectedDate.valueOf()){
 										cell.addClass('calendarDaySelected');
-										console.log(new Date(startd.getYear(), startd.getMonth(), startd.getDate()) );
+										console.log(new Date(yy,md,dy) );
 										console.log(selectedDate);
 									}
 								}	
