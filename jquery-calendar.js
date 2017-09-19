@@ -96,6 +96,7 @@
 							}else{
 								var dy = startd.getDate();
 								var md = startd.getMonth();
+								var yy = startd.getYear();
 								if( md!= month){
 									//end of month
 									cell = $(row.cells[i]);
@@ -106,7 +107,7 @@
 									//days
 									$(row.cells[i]).find('div').remove();
 									$(row.cells[i]).append('<div class="tdcaltext">'+dy+'</div>'); //add div for date text
-									if(new Date(startd.getYear(), startd.getMonth(), startd.getDate()) < selectedDate){
+									if(new Date(yy,md,dy) < selectedDate){
 										$(row.cells[i]).append('<div class="tdcalbody">'+Math.floor((Math.random()*410) +90)+'</div>');
 									}else{
 										$(row.cells[i]).append('<div class="tdcalbody"></div>');
