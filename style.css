@@ -29,14 +29,17 @@ th{
 	text-align: center;
 	font-weight: 700;
 	background: white;
-	border: 1px .5px 1px .5px solid black;
+	border: 1px solid black;
+	border-width: 1px .5px 1px .5px;
 	
 }
 th.calleft{
-	border: 1px .5px 1px 1px solid black;
+	border: 1px solid black;
+	border-width: 1px .5px 1px 1px;
 }
 th.callright{
-	border: 1px 1px 1px .5px solid black;
+	border: 1px solid black;
+	border-width: 1px 1px 1px .5px;
 }
 td{
 	font-size: 12px;
