@@ -436,6 +436,7 @@ div#calhead{
 	font-size: 22px;
 	border-radius: 20px 20px 0 0;
 	display: flex;
+	justify-content: center;
 }
 div#calprev{
 	width:32%;
@@ -461,6 +462,7 @@ div#caltitle{
 	display:flex;
 	text-align: center;
 	cursor: default;
+	justify-content: center;
 	padding-top: -5px;
 	
 }
