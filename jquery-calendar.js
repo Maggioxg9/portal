@@ -100,9 +100,9 @@
 								if( md!= month){
 									//end of month
 									cell = $(row.cells[i]);
-									cell = $(row.cells[i]).find('div').remove();
 									cell.removeClass();
 									cell.addClass('calendarDayGray');
+									$(row.cells[i]).find('div').remove();
 								}else {
 									//days
 									cell = $(row.cells[i]).find('div').remove();
