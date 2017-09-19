@@ -43,12 +43,11 @@ td{
 	border: 1px solid lightgray;	
 }
 table{
-	width: 100% !important;
+	width: 700px;
 	height: 100%;	
 	border-spacing:0;
 	padding:0;
 	border-collapse: collapse;
-	table-layout: fixed;
 }
 
 html, body { 
