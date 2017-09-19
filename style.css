@@ -460,6 +460,7 @@ div#caltitle{
 }
 span.calbtn:hover{
 	background: blue;
+	cursor: pointer;
 }
 div#calnext{
 	width:32%;
