@@ -43,7 +43,6 @@ td{
 	border: 1px solid lightgray;	
 }
 table{
-	display: block;
 	width: 100% !important;
 	height: 100%;	
 	border-spacing:0;
