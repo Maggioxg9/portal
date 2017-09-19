@@ -74,7 +74,7 @@
 		var refreshDayTable = function () {
 					var table = getContentTable();
 					var month = selectedMonth;
-					var year = selectedYear;
+					var year = selectedYear.getFullYear();
 
 					var startd = new Date(year, month, 1);
 					//var d1 = FirstDayOfWeek;
