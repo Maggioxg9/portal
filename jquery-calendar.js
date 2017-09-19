@@ -106,7 +106,7 @@
 									//days
 									$(row.cells[i]).find('div').remove();
 									$(row.cells[i]).append('<div class="tdcaltext">'+dy+'</div>'); //add div for date text
-									if(startd.getDate() < selectedDate){
+									if(new Date(startd.getYear(), startd.getMonth(), startd.getDate()) < selectedDate){
 										$(row.cells[i]).append('<div class="tdcalbody">'+Math.floor((Math.random()*410) +90)+'</div>');
 									}else{
 										$(row.cells[i]).append('<div class="tdcalbody"></div>');
@@ -119,7 +119,7 @@
 									cell.removeClass();
 									if (startd.valueOf() == selectedDate.valueOf()){
 										cell.addClass('calendarDaySelected');
-										console.log(startd.getDate());
+										console.log(new Date(startd.getYear(), startd.getMonth(), startd.getDate() );
 										console.log(selectedDate);
 									}
 								}	
