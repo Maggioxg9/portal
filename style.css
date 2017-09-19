@@ -448,14 +448,8 @@ div#calprev{
 div#calprevpointer {
 	cursor: pointer;
 }
-div#calprevpointer:hover {
-	background: blue;
-}
 div#calnextpointer {
 	cursor: pointer;
-}
-div#calnextpointer:hover {
-	background: blue;
 }
 div#caltitle{
 	width:32%;
@@ -463,8 +457,9 @@ div#caltitle{
 	text-align: center;
 	cursor: default;
 	justify-content: center;
-	padding-top: -5px;
-	
+}
+span.calbtn:hover{
+	background: blue;
 }
 div#calnext{
 	width:32%;
