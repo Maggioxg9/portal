@@ -438,27 +438,25 @@ div#calhead{
 }
 div#calprev{
 	width:32%;
-	display: inline-block;
+	display: flex;
 	text-align: right;
 	
 }
 div#calprevpointer {
 	cursor: pointer;
-	float: right;
 }
 div#calprevpointer:hover {
 	background: blue;
 }
 div#calnextpointer {
 	cursor: pointer;
-	float: left;
 }
 div#calnextpointer:hover {
 	background: blue;
 }
 div#caltitle{
 	width:32%;
-	display:inline-block;
+	display:flex;
 	text-align: center;
 	cursor: default;
 	padding-top: -5px;
@@ -466,7 +464,7 @@ div#caltitle{
 }
 div#calnext{
 	width:32%;
-	display:inline-block;
+	display:flex;
 	text-align: left;
 }
 div#calbody{
