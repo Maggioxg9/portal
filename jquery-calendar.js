@@ -135,7 +135,7 @@
 					{
 						var target = $(e.target);
 				
-						if (target.hasClass('calbtn')){
+						if (target.hasClass('calprevbtn')){
 							setSelectedMonth(selectedMonth - 1);
 						}else if (target.hasClass('calnextbtn')){
 							setSelectedMonth(selectedMonth + 1);
